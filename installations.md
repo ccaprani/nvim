@@ -1,0 +1,22 @@
+# Neovim
+@. Download from www.neovim.org
+@. Extract to `C:\Program Files\Neovim`
+
+# Git
+@ Download *Git for Windows*
+@ Install and point to nvim.exe as the text editor
+
+Here are some commands for converting an existing folder to a github repo
+
+    cd <localdir>
+    git init
+    git add .
+    git commit -m 'message'
+    git remote add origin <url>
+    git push -u origin master
+
+
+#Node
+This is needed for coc
+
+

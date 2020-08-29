@@ -1,0 +1,10 @@
+{
+    "python.jediEnabled": true,
+    "coc.preferences.formatOnType": true,
+    "coc.preferences.formatOnSaveFiletypes": ["python"],
+    "python.formatting.provider": "black",
+    "python.linting.enabled": true,
+    "python.linting.pylintArgs": ["--disable=C0330,C0103"],
+    "python.linting.pylintUseMinimalCheckers": false,
+    "python.linting.pylintPath": "pylint"
+}
