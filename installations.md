@@ -1,10 +1,10 @@
 # Neovim
-@. Download from www.neovim.org
-@. Extract to `C:\Program Files\Neovim`
+* Download from www.neovim.org
+* Extract to `C:\Program Files\Neovim`
 
 # Git
-@ Download *Git for Windows*
-@ Install and point to nvim.exe as the text editor
+* Download *Git for Windows*
+* Install and point to nvim.exe as the text editor
 
 Here are some commands for converting an existing folder to a github repo
 
@@ -17,6 +17,10 @@ Here are some commands for converting an existing folder to a github repo
 
 
 #Node
-This is needed for coc
+This is needed for coc and other plugins.
+When installing, select to install all dependencies, including chocolatley.
+
+#Python neovim
+Once python installed, 'pip install neovim'
 
 
