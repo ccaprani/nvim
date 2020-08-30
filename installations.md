@@ -15,6 +15,12 @@ Here are some commands for converting an existing folder to a github repo
     git remote add origin <url>
     git push -u origin master
 
+Note, may need to do this outside nvim because of authentication.
+
+# Plugins
+To enable the download and installation of vim plugins:
+
+curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 #Node
 This is needed for coc
