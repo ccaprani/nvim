@@ -1,3 +1,6 @@
+#Introduction
+This is a brief document of setting up my Neovim set up on a new device.
+
 # Neovim
 * Download from www.neovim.org
 * Extract to `C:\Program Files\Neovim`
@@ -14,6 +17,8 @@ Here are some commands for converting an existing folder to a github repo
     git commit -m 'message'
     git remote add origin <url>
     git push -u origin master
+
+#Plugins
 
 
 #Node
