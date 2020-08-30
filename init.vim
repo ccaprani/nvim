@@ -42,7 +42,7 @@ nnoremap <leader>so :source Session.vim<CR>
 nnoremap <C-s> :wall<cr>
 nnoremap <C-q> :qall<CR>
 
-call plug#begin('~/AppData/Local/nvim-data/plugged')
+call plug#begin('~/AppData/Local/nvim/plugged')
 
 " File explorer
 Plug 'scrooloose/nerdtree'
