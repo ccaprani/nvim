@@ -143,7 +143,7 @@ let g:airline#extensions#tabline#enabled=1
 let g:airline#extensions#tabline#fnamemode=':t'
 nmap <leader>1 :bp<CR>
 nmap <leader>2 :bn<CR>
-nmap <C-w> :bd<CR>
+nmap <leader>n :bd<CR>
 " Open Starify on new tab - confuses other windows though
 "" autocmd TabNewEntered * Startify
 
