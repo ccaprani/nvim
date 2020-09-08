@@ -79,7 +79,7 @@ Plug 'gruvbox-community/gruvbox'
 Plug 'sainnhe/gruvbox-material'
 Plug 'vim-airline/vim-airline'
 " REPL
-Plug 'sillybun/vim-repl'
+" Plug 'sillybun/vim-repl'  " not supporting neovim yet
 call plug#end()
 
 
