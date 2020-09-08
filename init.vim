@@ -78,7 +78,8 @@ Plug 'airblade/vim-gitgutter'
 Plug 'gruvbox-community/gruvbox'
 Plug 'sainnhe/gruvbox-material'
 Plug 'vim-airline/vim-airline'
-
+" REPL
+Plug 'sillybun/vim-repl'
 call plug#end()
 
 
