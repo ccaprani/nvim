@@ -78,7 +78,9 @@ Plug 'airblade/vim-gitgutter'
 Plug 'gruvbox-community/gruvbox'
 Plug 'sainnhe/gruvbox-material'
 Plug 'vim-airline/vim-airline'
-" REPL
+" Tagbar
+Plug 'majutsushi/tagbar'
+"" REPL
 " Plug 'sillybun/vim-repl'  " not supporting neovim yet
 call plug#end()
 
@@ -148,6 +150,8 @@ nmap <leader>n :bd<CR>
 " Open Starify on new tab - confuses other windows though
 "" autocmd TabNewEntered * Startify
 
+" Tagbar
+nnoremap <silent> <leader>t :TagbarToggle<CR>
 " Nerdtree
 let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
