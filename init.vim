@@ -54,6 +54,7 @@ Plug 'lervag/vimtex'
 Plug 'KeitaNakamura/tex-conceal.vim'
 " Snippets
 Plug 'sirver/ultisnips'
+Plug 'honza/vim-snippets'
 "Startify
 Plug 'mhinz/vim-startify'
 " Code completion
@@ -80,8 +81,11 @@ Plug 'sainnhe/gruvbox-material'
 Plug 'vim-airline/vim-airline'
 " Tagbar
 Plug 'majutsushi/tagbar'
-"" REPL
+" REPL
+Plug 'urbainvaes/vim-ripple'
 " Plug 'sillybun/vim-repl'  " not supporting neovim yet
+" Debugger
+Plug 'puremourning/vimspector'
 call plug#end()
 
 
@@ -114,9 +118,9 @@ map <silent> <A-l>    :vertical resize +2<CR>
 vnoremap < <gv
 vnoremap > >gv
 " Tab to indent in visual mode.
-vnoremap <Tab> >gv
+vnoremap <tab> >gv
 " Shift+Tab to unindent in visual mode.
-vnoremap <S-Tab> <gv
+vnoremap <S-tab> <gv
 
 "Faster ESC.
 inoremap jk <ESC>
@@ -130,9 +134,14 @@ inoremap <silent> <C-t> <Esc>b~lea
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
 
+" Path to the python exe
+let g:python3_host_prog = "C:\\Users\\ccapr\\Anaconda3\\python.exe"
 
 " ---- Plugin Specific Settings
 
+" Ripple
+" https://github.com/urbainvaes/vim-ripple/issues/12
+let g:ripple_repls = { "python": ["ipython", "\<esc>[200~", "\<esc>[201~\<cr>", 1] }
 
 " Colorscheme settings
 let g:gruvbox_contrast_dark = 'hard'
@@ -144,11 +153,24 @@ set background=dark
 " Tabs
 let g:airline#extensions#tabline#enabled=1
 let g:airline#extensions#tabline#fnamemode=':t'
+let g:airline#extensions#tabline#buffer_nr_show = 1
 nmap <leader>1 :bp<CR>
 nmap <leader>2 :bn<CR>
-nmap <leader>n :bd<CR>
+nmap <leader>d :bd<CR>
 " Open Starify on new tab - confuses other windows though
 "" autocmd TabNewEntered * Startify
+
+" Startify
+let g:startify_lists = [
+          \ { 'type': 'files',     'header': ['   Files']            },
+          \ { 'type': 'dir',       'header': ['   Current Directory '. getcwd()] },
+          \ { 'type': 'sessions',  'header': ['   Sessions']       },
+          \ { 'type': 'bookmarks', 'header': ['   Bookmarks']      },
+          \ ]
+let g:startify_bookmarks = [
+            \ { 'i': '~/Appdata/Local/nvim/init.vim' },
+            \ { 'p': '~/Google Drive/~Research/Code/Python' },
+            \ ]
 
 " Tagbar
 nnoremap <silent> <leader>t :TagbarToggle<CR>
@@ -161,7 +183,6 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 " next few ensure NT opens in current file folder
 set autochdir
 let NERDTreeChDirMode=2
-nnoremap <leader>n :NERDTree .<CR>
 
 " Latex Settings
 let g:tex_flavor='latex'
@@ -198,21 +219,31 @@ nnoremap <silent> <leader>lv :VimtexView<cr>
 vnoremap <silent> <leader>ls :VimtexCompileSelected<cr>
 nnoremap <silent> <leader>li :VimtexInfo<cr>
 nnoremap <silent> <leader>lt :VimtexTocToggle<cr>
+nnoremap <silent> <leader>le :VimtexErrors<cr>
 
 "Pandoc
 let g:pandoc#filetypes#handled = ["pandoc", "markdown", "rst"]
 let g:pandoc#modules#disabled = ["folding"]
 let g:pandoc#command#custom_open = "MyPandocOpen"
 let g:pandoc#command#autoexec_command = "Pandoc! pdf"
+let g:pandoc#keyboard#use_default_mappings = 1
 "letg:pandoc#command#prefer_pdf
 function! MyPandocOpen(file)
    return 'SumatraPDF ' . shellescape(expand(a:file,':p'))
 endfunction
 
+" Ultisnips
+let g:UltiSnipsSnippetsDir='%localappdata%/nvim/UltiSnips'
+let g:UltiSnipsSnippetDirectories=["UltiSnips"]
+
 " Python
 autocmd BufNewFile,BufRead *.py set foldmethod=indent
 "Folding - open
 nnoremap <space> za 
+
+" Vimspector
+let g:vimspector_enable_mappings = 'HUMAN'
+" let g:vimspector_install_gadgets = ['debugpy']
 
 " Snippets
 let g:UltiSnipsExpandTrigger = '<tab>'
@@ -232,3 +263,24 @@ nmap <leader>g] <Plug>(coc-diagnostic-next)
 nmap <silent> <leader>gp <Plug>(coc-diagnostic-prev-error)
 nmap <silent> <leader>gn <Plug>(coc-diagnostic-next-error)
 nnoremap <leader>cr :CocRestart
+
+" Add support for markdown files in tagbar.
+if has('win32')
+    let g:md_ctags_bin=fnamemodify(stdpath('config')."\\tools\\markdown2ctags.exe", ":p")
+else
+    let g:md_ctags_bin=fnamemodify(stdpath('config')."/tools/markdown2ctags.py", ":p")
+endif
+let g:tagbar_type_pandoc = {
+    \ 'ctagstype': 'pandoc', 
+    \ 'ctagsbin' : g:md_ctags_bin,
+    \ 'ctagsargs' : '-f - --sort=yes',
+    \ 'kinds' : [
+        \ 's:sections',
+        \ 'i:images'
+    \ ],
+    \ 'sro' : '|',
+    \ 'kind2scope' : {
+        \ 's' : 'section',
+    \ },
+    \ 'sort': 0,
+    \ }
