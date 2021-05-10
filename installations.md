@@ -29,7 +29,21 @@ curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubuserc
 This is needed for coc and other plugins.
 When installing, select to install all dependencies, including chocolatley.
 
+Install neovim for node:
+'''
+npm install -g neovim
+'''
+
 #Python neovim
 Once python installed, 'pip install neovim'
+For linting with coc 'pip install pylint'
 
+# Code Completion
+Must do ':CocInstall coc-python' to complete the code comp installation.
 
+# Install SumatraPDF
+This is for LaTeX viewing
+
+    'C:\Program Files\SumatraPDF'
+
+And add this path to the Environment 
