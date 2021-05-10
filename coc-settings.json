@@ -1,5 +1,6 @@
 {
     "python.jediEnabled": true,
+    "python.jediPath": "~/Anaconda3/Lib/site-packages/",
     "coc.preferences.formatOnType": true,
     "coc.preferences.formatOnSaveFiletypes": ["python"],
     "python.formatting.provider": "black",
