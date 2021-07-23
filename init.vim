@@ -47,8 +47,11 @@ call plug#begin('~/AppData/Local/nvim/plugged')
 " File explorer
 Plug 'scrooloose/nerdtree'
 " File search
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
+" Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+" Plug 'junegunn/fzf.vim'
+Plug 'nvim-lua/popup.nvim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
 " Latex support
 Plug 'lervag/vimtex'
 Plug 'KeitaNakamura/tex-conceal.vim'
@@ -58,7 +61,10 @@ Plug 'honza/vim-snippets'
 "Startify
 Plug 'mhinz/vim-startify'
 " Code completion
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'hrsh7th/nvim-compe' 
+" lspconfig
+Plug 'neovim/nvim-lspconfig'
 " Surround.vim
 Plug 'tpope/vim-surround'
 " Commenting
@@ -84,13 +90,21 @@ Plug 'majutsushi/tagbar'
 " REPL
 Plug 'urbainvaes/vim-ripple'
 " Plug 'sillybun/vim-repl'  " not supporting neovim yet
-" Debugger
+" Debugger and window maximize
 Plug 'puremourning/vimspector'
+Plug 'szw/vim-maximizer'
+" CSV viewer
+Plug 'chrisbra/csv.vim'
+" The famous treesitter
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
+" Make escaping quicker - no lag
+Plug 'jdhao/better-escape.vim'
 call plug#end()
 
 
 " ---- VIM-ONLY KEY BINDINGS ----
 
+" nnoremap <space> za " Folding - open
 
 " Spellings on/off with F6
 map <F6> :setlocal spell! spelllang=en<CR>
@@ -123,8 +137,8 @@ vnoremap <tab> >gv
 vnoremap <S-tab> <gv
 
 "Faster ESC.
-inoremap jk <ESC>
-inoremap kj <ESC>
+" inoremap jk <ESC>
+" inoremap kj <ESC>
 
 " Turn the word under cursor to upper case
 inoremap <silent> <C-u> <Esc>viwUea
@@ -138,6 +152,9 @@ vnoremap K :m '<-2<CR>gv=gv
 let g:python3_host_prog = "C:\\Users\\ccapr\\Anaconda3\\python.exe"
 
 " ---- Plugin Specific Settings
+
+" Better escape
+let g:better_escape_shortcut = ['jk', 'jj', 'kj']
 
 " Ripple
 " https://github.com/urbainvaes/vim-ripple/issues/12
@@ -157,6 +174,7 @@ let g:airline#extensions#tabline#buffer_nr_show = 1
 nmap <leader>1 :bp<CR>
 nmap <leader>2 :bn<CR>
 nmap <leader>d :bd<CR>
+ 
 " Open Starify on new tab - confuses other windows though
 "" autocmd TabNewEntered * Startify
 
@@ -174,15 +192,57 @@ let g:startify_bookmarks = [
 
 " Tagbar
 nnoremap <silent> <leader>t :TagbarToggle<CR>
+
 " Nerdtree
 let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
 nnoremap  <leader>f :NERDTreeToggle<CR>
 nmap <leader>nf :NERDTreeFind<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
 " next few ensure NT opens in current file folder
 set autochdir
 let NERDTreeChDirMode=2
+
+" Completion
+set completeopt=menuone,noselect
+inoremap <silent><expr> <C-Space> compe#complete()
+inoremap <silent><expr> <CR>      compe#confirm('<CR>')
+inoremap <silent><expr> <C-e>     compe#close('<C-e>')
+inoremap <silent><expr> <C-f>     compe#scroll({ 'delta': +4 })
+inoremap <silent><expr> <C-d>     compe#scroll({ 'delta': -4 })
+
+let g:compe = {}
+let g:compe.enabled = v:true
+let g:compe.autocomplete = v:true
+let g:compe.debug = v:false
+let g:compe.min_length = 1
+let g:compe.preselect = 'enable'
+let g:compe.throttle_time = 80
+let g:compe.source_timeout = 200
+let g:compe.resolve_timeout = 800
+let g:compe.incomplete_delay = 400
+let g:compe.max_abbr_width = 100
+let g:compe.max_kind_width = 100
+let g:compe.max_menu_width = 100
+let g:compe.documentation = v:true
+
+let g:compe.source = {}
+let g:compe.source.path = v:true
+let g:compe.source.buffer = v:true
+let g:compe.source.calc = v:true
+let g:compe.source.nvim_lsp = v:true
+let g:compe.source.nvim_lua = v:true
+let g:compe.source.vsnip = v:true
+let g:compe.source.ultisnips = v:true
+let g:compe.source.luasnip = v:true
+let g:compe.source.emoji = v:true
+
+" Find files using Telescope command-line sugar.
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
 " Latex Settings
 let g:tex_flavor='latex'
@@ -238,31 +298,41 @@ let g:UltiSnipsSnippetDirectories=["UltiSnips"]
 
 " Python
 autocmd BufNewFile,BufRead *.py set foldmethod=indent
-"Folding - open
-nnoremap <space> za 
 
 " Vimspector
 let g:vimspector_enable_mappings = 'HUMAN'
 " let g:vimspector_install_gadgets = ['debugpy']
+
+" Maximizer
+" nnoremap <leader>m :MaximizerToggle!<cr>
+nnoremap <leader>m :MaximizerToggle<CR>
+vnoremap <leader>m :MaximizerToggle<CR>gv
+inoremap <leader>m <C-o>:MaximizerToggle<CR>
 
 " Snippets
 let g:UltiSnipsExpandTrigger = '<tab>'
 let g:UltiSnipsJumpForwardTrigger = '<tab>'
 let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
 
+"LSP settings
+lua << EOF
+require'lspconfig'.pyright.setup{}
+require'lspconfig'.texlab.setup{}
+EOF
+
 " COC Settings
 "command! -nargs=0 Prettier :CocCommand prettier.formatFile
 " inoremap <silent><expr> <C-space> coc#refresh()
-nmap <leader>gd <Plug>(coc-definition)
-nmap <leader>gy <Plug>(coc-type-definition)
-nmap <leader>gi <Plug>(coc-implementation)
-nmap <leader>gr <Plug>(coc-references)
-nmap <leader>rn <Plug>(coc-rename)
-nmap <leader>g[ <Plug>(coc-diagnostic-prev)
-nmap <leader>g] <Plug>(coc-diagnostic-next)
-nmap <silent> <leader>gp <Plug>(coc-diagnostic-prev-error)
-nmap <silent> <leader>gn <Plug>(coc-diagnostic-next-error)
-nnoremap <leader>cr :CocRestart
+" nmap <leader>gd <Plug>(coc-definition)
+" nmap <leader>gy <Plug>(coc-type-definition)
+" nmap <leader>gi <Plug>(coc-implementation)
+" nmap <leader>gr <Plug>(coc-references)
+" nmap <leader>rn <Plug>(coc-rename)
+" nmap <leader>g[ <Plug>(coc-diagnostic-prev)
+" nmap <leader>g] <Plug>(coc-diagnostic-next)
+" nmap <silent> <leader>gp <Plug>(coc-diagnostic-prev-error)
+" nmap <silent> <leader>gn <Plug>(coc-diagnostic-next-error)
+" nnoremap <leader>cr :CocRestart
 
 " Add support for markdown files in tagbar.
 if has('win32')
