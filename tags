@@ -1,0 +1,199 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+<	init.vim	/^vnoremap < <gv$/;"	m
+<A-h>	init.vim	/^map <silent> <A-h>    :vertical resize -2<CR>$/;"	m
+<A-j>	init.vim	/^map <silent> <A-j>    :resize -2<CR>$/;"	m
+<A-k>	init.vim	/^map <silent> <A-k>    :resize +2<CR>$/;"	m
+<A-l>	init.vim	/^map <silent> <A-l>    :vertical resize +2<CR>$/;"	m
+<C-Space>	init.vim	/^inoremap <silent><expr> <C-Space> compe#complete()$/;"	m
+<C-c>	the_primeagen_init.vim	/^inoremap <C-c> <esc>$/;"	m
+<C-d>	init.vim	/^inoremap <silent><expr> <C-d>     compe#scroll({ 'delta': -4 })$/;"	m
+<C-e>	init.vim	/^inoremap <silent><expr> <C-e>     compe#close('<C-e>')$/;"	m
+<C-f>	init.vim	/^inoremap <silent><expr> <C-f>     compe#scroll({ 'delta': +4 })$/;"	m
+<C-h>	init.vim	/^nnoremap <C-h> <C-w>h$/;"	m
+<C-j>	init.vim	/^nnoremap <C-j> <C-w>j$/;"	m
+<C-k>	init.vim	/^nnoremap <C-k> <C-w>k$/;"	m
+<C-l>	init.vim	/^inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u$/;"	m
+<C-l>	init.vim	/^nnoremap <C-l> <C-w>l$/;"	m
+<C-p>	the_primeagen_init.vim	/^nnoremap <C-p> :GFiles<CR>$/;"	m
+<C-q>	init.vim	/^nnoremap <C-q> :qall<CR>$/;"	m
+<C-s>	init.vim	/^nnoremap <C-s> :wall<cr>$/;"	m
+<C-space>	the_primeagen_init.vim	/^inoremap <silent><expr> <C-space> coc#refresh()$/;"	m
+<C-t>	init.vim	/^inoremap <silent> <C-t> <Esc>b~lea$/;"	m
+<C-u>	init.vim	/^inoremap <silent> <C-u> <Esc>viwUea$/;"	m
+<CR>	init.vim	/^inoremap <silent><expr> <CR>      compe#confirm('<CR>')$/;"	m
+<F2>	init.vim	/^map <F2> :setlocal spell! spelllang=en<CR>$/;"	m
+<Leader>+	the_primeagen_init.vim	/^nnoremap <Leader>+ :vertical resize +5<CR>$/;"	m
+<Leader>-	the_primeagen_init.vim	/^nnoremap <Leader>- :vertical resize -5<CR>$/;"	m
+<Leader><CR>	the_primeagen_init.vim	/^nnoremap <Leader><CR> :so ~\/.config\/nvim\/init.vim<CR>$/;"	m
+<Leader>ee	the_primeagen_init.vim	/^nnoremap <Leader>ee oif err != nil {<CR>log.Fatalf("%+v\\n", err)<CR>}<CR><esc>kkI<esc>$/;"	m
+<Leader>p	init.vim	/^noremap <Leader>p "+p$/;"	m
+<Leader>pf	the_primeagen_init.vim	/^nnoremap <Leader>pf :Files<CR>$/;"	m
+<Leader>ps	the_primeagen_init.vim	/^nnoremap <Leader>ps :Rg<SPACE>$/;"	m
+<Leader>q	init.vim	/^nnoremap <Leader>q :q!<CR>$/;"	m
+<Leader>rp	the_primeagen_init.vim	/^nnoremap <Leader>rp :resize 100<CR>$/;"	m
+<Leader>s	init.vim	/^nnoremap <Leader>s :w!<CR>$/;"	m
+<Leader>th	the_primeagen_init.vim	/^nmap <Leader>th <Plug>BujoAddnormal$/;"	m
+<Leader>tu	the_primeagen_init.vim	/^nmap <Leader>tu <Plug>BujoChecknormal$/;"	m
+<Leader>y	init.vim	/^noremap <Leader>y "+y$/;"	m
+<S-tab>	init.vim	/^vnoremap <S-tab> <gv$/;"	m
+<Space>	init.vim	/^nnoremap <Space> <Nop>  $/;"	m
+<leader>1	init.vim	/^nmap <leader>1 :bp<CR>$/;"	m
+<leader>2	init.vim	/^nmap <leader>2 :bn<CR>$/;"	m
+<leader>cr	the_primeagen_init.vim	/^nnoremap <leader>cr :CocRestart$/;"	m
+<leader>d	init.vim	/^nmap <leader>d :bd<CR>$/;"	m
+<leader>ev	init.vim	/^nnoremap <leader>ev :vsplit $MYVIMRC<cr>$/;"	m
+<leader>f	init.vim	/^nnoremap  <leader>f :NERDTreeToggle<CR>$/;"	m
+<leader>fb	init.vim	/^nnoremap <leader>fb <cmd>Telescope buffers<cr>$/;"	m
+<leader>ff	init.vim	/^nnoremap <leader>ff <cmd>Telescope find_files<cr>$/;"	m
+<leader>fg	init.vim	/^nnoremap <leader>fg <cmd>Telescope live_grep<cr>$/;"	m
+<leader>fh	init.vim	/^nnoremap <leader>fh <cmd>Telescope help_tags<cr>$/;"	m
+<leader>g[	the_primeagen_init.vim	/^nmap <leader>g[ <Plug>(coc-diagnostic-prev)$/;"	m
+<leader>g]	the_primeagen_init.vim	/^nmap <leader>g] <Plug>(coc-diagnostic-next)$/;"	m
+<leader>gd	the_primeagen_init.vim	/^nmap <leader>gd <Plug>(coc-definition)$/;"	m
+<leader>gh	the_primeagen_init.vim	/^nmap <leader>gh :diffget \/\/3<CR>$/;"	m
+<leader>gi	the_primeagen_init.vim	/^nmap <leader>gi <Plug>(coc-implementation)$/;"	m
+<leader>gn	the_primeagen_init.vim	/^nmap <silent> <leader>gn <Plug>(coc-diagnostic-next-error)$/;"	m
+<leader>gp	the_primeagen_init.vim	/^nmap <silent> <leader>gp <Plug>(coc-diagnostic-prev-error)$/;"	m
+<leader>gr	the_primeagen_init.vim	/^nmap <leader>gr <Plug>(coc-references)$/;"	m
+<leader>gs	the_primeagen_init.vim	/^nmap <leader>gs :G<CR>$/;"	m
+<leader>gu	the_primeagen_init.vim	/^nmap <leader>gu :diffget \/\/2<CR>$/;"	m
+<leader>gy	the_primeagen_init.vim	/^nmap <leader>gy <Plug>(coc-type-definition)$/;"	m
+<leader>h	the_primeagen_init.vim	/^nnoremap <leader>h :wincmd h<CR>$/;"	m
+<leader>j	the_primeagen_init.vim	/^nnoremap <leader>j :wincmd j<CR>$/;"	m
+<leader>k	the_primeagen_init.vim	/^nnoremap <leader>k :wincmd k<CR>$/;"	m
+<leader>l	the_primeagen_init.vim	/^nnoremap <leader>l :wincmd l<CR>$/;"	m
+<leader>m	init.vim	/^nnoremap <leader>m :MaximizerToggle<CR>$/;"	m
+<leader>mm	init.vim	/^nnoremap <leader>mm :MinimapToggle<cr>$/;"	m
+<leader>nf	init.vim	/^nmap <leader>nf :NERDTreeFind<CR>$/;"	m
+<leader>pb	init.vim	/^nnoremap <leader>pb :Pandoc! beamer<cr>$/;"	m
+<leader>phw	the_primeagen_init.vim	/^nnoremap <leader>phw :h <C-R>=expand("<cword>")<CR><CR>$/;"	m
+<leader>pl	init.vim	/^nnoremap <leader>pl :Pandoc! latex<cr>$/;"	m
+<leader>prw	the_primeagen_init.vim	/^nnoremap <leader>prw :CocSearch <C-R>=expand("<cword>")<CR><CR>$/;"	m
+<leader>pt	init.vim	/^nnoremap <leader>pt :TOC<cr>$/;"	m
+<leader>pv	the_primeagen_init.vim	/^nnoremap <leader>pv :wincmd v<bar> :Ex <bar> :vertical resize 30<CR>$/;"	m
+<leader>pw	the_primeagen_init.vim	/^nnoremap <leader>pw :Rg <C-R>=expand("<cword>")<CR><CR>$/;"	m
+<leader>rr	the_primeagen_init.vim	/^nmap <leader>rr <Plug>(coc-rename)$/;"	m
+<leader>so	init.vim	/^nnoremap <leader>so :source Session.vim<CR>$/;"	m
+<leader>ss	init.vim	/^nnoremap <leader>ss :mksession!<CR>$/;"	m
+<leader>sv	init.vim	/^nnoremap <leader>sv :source $MYVIMRC<cr>$/;"	m
+<leader>t	init.vim	/^nnoremap <silent> <leader>t :TagbarToggle<CR>$/;"	m
+<leader>u	the_primeagen_init.vim	/^nnoremap <leader>u :UndotreeShow<CR>$/;"	m
+<leader>vtm	the_primeagen_init.vim	/^nmap <leader>vtm :highlight Pmenu ctermbg=gray guibg=gray$/;"	m
+<leader>vwm	the_primeagen_init.vim	/^nnoremap <leader>vwm :colorscheme gruvbox<bar>:set background=dark<CR>$/;"	m
+<tab>	init.vim	/^vnoremap <tab> >gv$/;"	m
+>	init.vim	/^vnoremap > >gv$/;"	m
+J	init.vim	/^vnoremap J :m '>+1<CR>gv=gv$/;"	m
+J	the_primeagen_init.vim	/^vnoremap J :m '>+1<CR>gv=gv$/;"	m
+K	init.vim	/^vnoremap K :m '<-2<CR>gv=gv$/;"	m
+K	the_primeagen_init.vim	/^vnoremap K :m '<-2<CR>gv=gv$/;"	m
+MyPandocOpen	init.vim	/^function! MyPandocOpen(file)$/;"	f
+NERDTreeChDirMode	init.vim	/^let NERDTreeChDirMode=2$/;"	v
+NERDTreeDirArrows	init.vim	/^let NERDTreeDirArrows = 1$/;"	v
+NERDTreeMinimalUI	init.vim	/^let NERDTreeMinimalUI = 1$/;"	v
+Prettier	the_primeagen_init.vim	/^command! -nargs=0 Prettier :CocCommand prettier.formatFile$/;"	c
+Q	init.vim	/^nnoremap Q <nop> $/;"	m
+TrimWhitespace	the_primeagen_init.vim	/^fun! TrimWhitespace()$/;"	f
+X	the_primeagen_init.vim	/^vnoremap X "_d$/;"	m
+check_back_space	the_primeagen_init.vim	/^function! s:check_back_space() abort$/;"	f
+g:UltiSnipsEditSplit	init.vim	/^let g:UltiSnipsEditSplit="vertical"$/;"	v
+g:UltiSnipsExpandTrigger	init.vim	/^let g:UltiSnipsExpandTrigger = '<tab>'$/;"	v
+g:UltiSnipsExpandTrigger	init.vim	/^let g:UltiSnipsExpandTrigger="<tab>"$/;"	v
+g:UltiSnipsJumpBackwardTrigger	init.vim	/^let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'$/;"	v
+g:UltiSnipsJumpBackwardTrigger	init.vim	/^let g:UltiSnipsJumpBackwardTrigger="<s-tab>"$/;"	v
+g:UltiSnipsJumpForwardTrigger	init.vim	/^let g:UltiSnipsJumpForwardTrigger = '<tab>'$/;"	v
+g:UltiSnipsJumpForwardTrigger	init.vim	/^let g:UltiSnipsJumpForwardTrigger="<tab>"$/;"	v
+g:UltiSnipsSnippetDirectories	init.vim	/^let g:UltiSnipsSnippetDirectories=["UltiSnips"]$/;"	v
+g:UltiSnipsSnippetsDir	init.vim	/^    let g:UltiSnipsSnippetsDir='%localappdata%\/nvim\/UltiSnips'$/;"	v
+g:UltiSnipsSnippetsDir	init.vim	/^    let g:UltiSnipsSnippetsDir='~\/.config\/nvim\/UltiSnips'$/;"	v
+g:airline#extensions#tabline#buffer_nr_show	init.vim	/^let g:airline#extensions#tabline#buffer_nr_show = 1$/;"	v
+g:airline#extensions#tabline#enabled	init.vim	/^let g:airline#extensions#tabline#enabled=1$/;"	v
+g:airline#extensions#tabline#fnamemode	init.vim	/^let g:airline#extensions#tabline#fnamemode=':t'$/;"	v
+g:better_escape_shortcut	init.vim	/^let g:better_escape_shortcut = ['jk', 'jj', 'kj']$/;"	v
+g:bujo#todo_file_path	the_primeagen_init.vim	/^let g:bujo#todo_file_path = $HOME . "\/.cache\/bujo"$/;"	v
+g:compe	init.vim	/^let g:compe = {}$/;"	v
+g:compe	init.vim	/^let g:compe.autocomplete = v:true$/;"	v
+g:compe	init.vim	/^let g:compe.debug = v:false$/;"	v
+g:compe	init.vim	/^let g:compe.documentation = v:true$/;"	v
+g:compe	init.vim	/^let g:compe.enabled = v:true$/;"	v
+g:compe	init.vim	/^let g:compe.incomplete_delay = 400$/;"	v
+g:compe	init.vim	/^let g:compe.max_abbr_width = 100$/;"	v
+g:compe	init.vim	/^let g:compe.max_kind_width = 100$/;"	v
+g:compe	init.vim	/^let g:compe.max_menu_width = 100$/;"	v
+g:compe	init.vim	/^let g:compe.min_length = 1$/;"	v
+g:compe	init.vim	/^let g:compe.preselect = 'enable'$/;"	v
+g:compe	init.vim	/^let g:compe.resolve_timeout = 800$/;"	v
+g:compe	init.vim	/^let g:compe.source = {}$/;"	v
+g:compe	init.vim	/^let g:compe.source.buffer = v:true$/;"	v
+g:compe	init.vim	/^let g:compe.source.calc = v:true$/;"	v
+g:compe	init.vim	/^let g:compe.source.emoji = v:true$/;"	v
+g:compe	init.vim	/^let g:compe.source.luasnip = v:true$/;"	v
+g:compe	init.vim	/^let g:compe.source.nvim_lsp = v:true$/;"	v
+g:compe	init.vim	/^let g:compe.source.nvim_lua = v:true$/;"	v
+g:compe	init.vim	/^let g:compe.source.path = v:true$/;"	v
+g:compe	init.vim	/^let g:compe.source.ultisnips = v:true$/;"	v
+g:compe	init.vim	/^let g:compe.source.vsnip = v:true$/;"	v
+g:compe	init.vim	/^let g:compe.source_timeout = 200$/;"	v
+g:compe	init.vim	/^let g:compe.throttle_time = 80$/;"	v
+g:go_auto_sameids	the_primeagen_init.vim	/^let g:go_auto_sameids = 1$/;"	v
+g:go_highlight_build_constraints	the_primeagen_init.vim	/^let g:go_highlight_build_constraints = 1$/;"	v
+g:go_highlight_extra_types	the_primeagen_init.vim	/^let g:go_highlight_extra_types = 1$/;"	v
+g:go_highlight_fields	the_primeagen_init.vim	/^let g:go_highlight_fields = 1$/;"	v
+g:go_highlight_format_strings	the_primeagen_init.vim	/^let g:go_highlight_format_strings = 1$/;"	v
+g:go_highlight_function_calls	the_primeagen_init.vim	/^let g:go_highlight_function_calls = 1$/;"	v
+g:go_highlight_function_parameters	the_primeagen_init.vim	/^let g:go_highlight_function_parameters = 1$/;"	v
+g:go_highlight_functions	the_primeagen_init.vim	/^let g:go_highlight_functions = 1$/;"	v
+g:go_highlight_generate_tags	the_primeagen_init.vim	/^let g:go_highlight_generate_tags = 1$/;"	v
+g:go_highlight_methods	the_primeagen_init.vim	/^let g:go_highlight_methods = 1$/;"	v
+g:go_highlight_operators	the_primeagen_init.vim	/^let g:go_highlight_operators = 1$/;"	v
+g:go_highlight_structs	the_primeagen_init.vim	/^let g:go_highlight_structs = 1$/;"	v
+g:go_highlight_types	the_primeagen_init.vim	/^let g:go_highlight_types = 1$/;"	v
+g:go_highlight_variable_declarations	the_primeagen_init.vim	/^let g:go_highlight_variable_declarations = 1$/;"	v
+g:gruvbox_contrast_dark	init.vim	/^let g:gruvbox_contrast_dark = 'hard'$/;"	v
+g:gruvbox_contrast_dark	the_primeagen_init.vim	/^let g:gruvbox_contrast_dark = 'hard'$/;"	v
+g:gruvbox_guisp_fallback	init.vim	/^let g:gruvbox_guisp_fallback = "bg"     " For bad spellings to be highlighted$/;"	v
+g:gruvbox_invert_selection	init.vim	/^let g:gruvbox_invert_selection='0'$/;"	v
+g:gruvbox_invert_selection	the_primeagen_init.vim	/^let g:gruvbox_invert_selection='0'$/;"	v
+g:md_ctags_bin	init.vim	/^    let g:md_ctags_bin=fnamemodify(stdpath('config')."\/tools\/markdown2ctags.py", ":p")$/;"	v
+g:md_ctags_bin	init.vim	/^    let g:md_ctags_bin=fnamemodify(stdpath('config')."\\\\tools\\\\markdown2ctags.exe", ":p")$/;"	v
+g:minimap_auto_start	init.vim	/^let g:minimap_auto_start = 0$/;"	v
+g:minimap_auto_start_win_enter	init.vim	/^let g:minimap_auto_start_win_enter = 0$/;"	v
+g:minimap_highlight_range	init.vim	/^let g:minimap_highlight_range = 1$/;"	v
+g:minimap_highlight_search	init.vim	/^let g:minimap_highlight_search = 1$/;"	v
+g:minimap_width	init.vim	/^let g:minimap_width = 10$/;"	v
+g:netrw_banner	the_primeagen_init.vim	/^let g:netrw_banner = 0$/;"	v
+g:netrw_browse_split	the_primeagen_init.vim	/^let g:netrw_browse_split = 2$/;"	v
+g:netrw_winsize	the_primeagen_init.vim	/^let g:netrw_winsize = 25$/;"	v
+g:pandoc#command#autoexec_command	init.vim	/^let g:pandoc#command#autoexec_command = "Pandoc! pdf"$/;"	v
+g:pandoc#command#custom_open	init.vim	/^let g:pandoc#command#custom_open = "MyPandocOpen"$/;"	v
+g:pandoc#filetypes#handled	init.vim	/^let g:pandoc#filetypes#handled = ["pandoc", "markdown", "rst"]$/;"	v
+g:pandoc#keyboard#use_default_mappings	init.vim	/^let g:pandoc#keyboard#use_default_mappings = 1$/;"	v
+g:pandoc#modules#disabled	init.vim	/^let g:pandoc#modules#disabled = ["folding"]$/;"	v
+g:python3_host_prog	init.vim	/^let g:python3_host_prog = expand('\/usr\/bin\/python')$/;"	v
+g:rg_derive_root	the_primeagen_init.vim	/^    let g:rg_derive_root='true'$/;"	v
+g:startify_lists	init.vim	/^let g:startify_lists = [$/;"	v
+g:tagbar_type_pandoc	init.vim	/^let g:tagbar_type_pandoc = {$/;"	v
+g:tex_conceal	init.vim	/^let g:tex_conceal='abdmg'$/;"	v
+g:tex_flavor	init.vim	/^let g:tex_flavor='latex'$/;"	v
+g:vimspector_enable_mappings	init.vim	/^let g:vimspector_enable_mappings = 'HUMAN'$/;"	v
+g:vimtex_compiler_latexmk	init.vim	/^let g:vimtex_compiler_latexmk = {$/;"	v
+g:vimtex_compiler_progname	init.vim	/^let g:vimtex_compiler_progname="nvr"$/;"	v
+g:vimtex_quickfix_mode	init.vim	/^let g:vimtex_quickfix_mode=2$/;"	v
+g:vimtex_toc_config	init.vim	/^let g:vimtex_toc_config = {$/;"	v
+g:vimtex_view_general_options	init.vim	/^    let g:vimtex_view_general_options $/;"	v
+g:vimtex_view_general_viewer	init.vim	/^    let g:vimtex_view_general_viewer  = 'zathura'$/;"	v
+g:vimtex_view_general_viewer	init.vim	/^    let g:vimtex_view_general_viewer = 'SumatraPDF'$/;"	v
+g:vimtex_view_method	init.vim	/^    let g:vimtex_view_method='zathura'$/;"	v
+gD	init.vim	/^nnoremap <silent> gD <cmd>lua vim.lsp.buf.declaration()<CR>$/;"	m
+gd	init.vim	/^nnoremap <silent> gd <cmd>lua vim.lsp.buf.definition()<CR>$/;"	m
+highlight_yank	the_primeagen_init.vim	/^augroup highlight_yank$/;"	a
+loaded_matchparen	the_primeagen_init.vim	/^let loaded_matchparen = 1$/;"	v
+mapleader	init.vim	/^let mapleader=" "   " g Leader key$/;"	v
+mapleader	the_primeagen_init.vim	/^let mapleader = " "$/;"	v
+maplocalleader	init.vim	/^let maplocalleader=" "$/;"	v
+remember_folds	init.vim	/^augroup remember_folds$/;"	a
+wrap_settings	init.vim	/^augroup wrap_settings$/;"	a

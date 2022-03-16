@@ -1,0 +1,172 @@
+syntax on
+
+" Hybrid line numbering
+set number relativenumber
+set nu rnu
+
+set guicursor=
+set noshowmatch
+set hidden
+set noerrorbells
+set tabstop=4 softtabstop=4
+set shiftwidth=4
+set expandtab
+set smartindent
+set smartcase
+set undodir=~/.vim/undodir
+set undofile
+set incsearch
+set termguicolors
+set noshowmode
+
+" Give more space for displaying messages.
+set cmdheight=2
+
+" Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
+" delays and poor user experience.
+set updatetime=50
+
+set colorcolumn=79
+highlight ColorColumn ctermbg=0 guibg=lightgrey
+
+call plug#begin('~/AppData/Local/nvim-data/plugged')
+
+" Latex support
+Plug 'lervag/vimtex'
+" Snippets
+Plug 'sirver/ultisnips'
+" Code completion
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" File explorer
+Plug 'scrooloose/nerdtree'
+" File search
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+"Git integration
+Plug 'mhinz/vim-signify'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rhubarb'
+Plug 'junegunn/gv.vim'
+" Python support
+Plug 'jiangmiao/auto-pairs'
+Plug 'vim-python/python-syntax'
+
+"  I AM SO SORRY FOR DOING COLOR SCHEMES IN MY VIMRC, BUT I HAVE
+Plug 'gruvbox-community/gruvbox'
+Plug 'sainnhe/gruvbox-material'
+Plug 'vim-airline/vim-airline'
+Plug 'flazz/vim-colorschemes'
+Plug 'ThePrimeagen/vim-be-good'
+
+call plug#end()
+
+let mapleader = " "
+
+" Colorscheme settings
+let g:gruvbox_contrast_dark = 'hard'
+let g:gruvbox_invert_selection='0'
+colorscheme gruvbox
+set background=dark
+
+" Latex settings
+let g:tex_flavor = 'latex'
+"let g:vimtex_fold_manual = 1
+let g:vimtex_fold_enabled = 0
+let g:vimtex_indent_enabled = 0
+"let g:vimtex_quickfix_open_on_warning=0
+let g:vimtex_mappings_enabled=0
+let g:vimtex_latexmk_continuous = 1
+let g:vimtex_compiler_progname = 'nvr'
+" use SumatraPDF if you are on Windows
+let g:vimtex_view_general_viewer = 'SumatraPDF'
+let g:vimtex_view_general_options 
+            \ = '-reuse-instance -forward-search @tex @line @pdf'
+let g:vimtex_view_general_options_latexmk = '-reuse-instance'
+set conceallevel=1
+let g:tex_conceal='abdmg'
+let g:vimtex_toc_config = {
+    \'split_pos'   : ':vert :botright',
+    \'split_width':  50,
+    \}
+"autocmd filetype tex nnoremap <F5> :VimtexCompile<CR>
+"autocmd filetype tex nnoremap <F6> :VimtexView<CR>
+"autocmd filetype tex nnoremap <C-t> :VimtexTocToggle<CR>
+nnoremap <silent> <leader>lc :VimtexCompile<cr>
+nnoremap <silent> <leader>lv :VimtexView<cr>
+vnoremap <silent> <leader>ls :VimtexCompileSelected<cr>
+nnoremap <silent> <leader>li :VimtexInfo<cr>
+nnoremap <silent> <leader>lt :VimtexTocToggle<cr>
+
+" Snippets config
+let g:UltiSnipsExpandTrigger = '<tab>'
+let g:UltiSnipsJumpForwardTrigger = '<tab>'
+let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
+" TOC settings
+" let g:vimtex_toc_config = {
+"             \ 'name' : 'TOC',
+"             \ 'layers' : ['content', 'todo', 'include'],
+"             \ 'resize' : 1,
+"             \ 'split_width' : 30,
+"             \ 'todo_sorted' : 0,
+"             \ 'show_help' : 1,
+"             \ 'show_numbers' : 1,
+"             \ 'mode' : 2,
+"             \}
+" 
+
+" System Clipboard shortcuts
+noremap <Leader>y "*y
+noremap <Leader>p "*p
+
+"Primeagan shortcuts
+nnoremap <leader>u :UndotreeShow<CR>
+nnoremap <leader>pv :wincmd v<bar> :Ex <bar> :vertical resize 30<CR>
+nnoremap <Leader>pf :Files<CR>
+nnoremap <Leader>+ :vertical resize +5<CR>
+nnoremap <Leader>- :vertical resize -5<CR>
+nnoremap <Leader>rp :resize 100<CR>
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
+
+" Nerdtree
+nnoremap <silent> <C-f> :NERDTreeToggle<CR>
+augroup nerdtree_open
+    autocmd!
+    autocmd VimEnter * NERDTree | wincmd p
+augroup END
+nmap <leader>nf :NERDTreeFind<CR>
+
+" Use tab for trigger completion with characters ahead and navigate.
+" NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
+" other plugin before putting this into your config.
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+" Vim with me
+nnoremap <leader>vwm :colorscheme gruvbox<bar>:set background=dark<CR>
+nmap <leader>vtm :highlight Pmenu ctermbg=gray guibg=gray
+
+command! -nargs=0 Prettier :CocCommand prettier.formatFile
+inoremap <silent><expr> <C-space> coc#refresh()
+
+" GoTo code navigation.
+nmap <leader>gd <Plug>(coc-definition)
+nmap <leader>gy <Plug>(coc-type-definition)
+nmap <leader>gi <Plug>(coc-implementation)
+nmap <leader>gr <Plug>(coc-references)
+nmap <leader>rr <Plug>(coc-rename)
+nmap <leader>g[ <Plug>(coc-diagnostic-prev)
+nmap <leader>g] <Plug>(coc-diagnostic-next)
+nmap <silent> <leader>gp <Plug>(coc-diagnostic-prev-error)
+nmap <silent> <leader>gn <Plug>(coc-diagnostic-next-error)
+nnoremap <leader>cr :CocRestart
+
+" Quicker <Esc> in insert mode
+inoremap <silent> jj <Esc>
+" Turn the word under cursor to upper case
+inoremap <silent> <c-u> <Esc>viwUea
+" Turn the current word into title case
+inoremap <silent> <c-t> <Esc>b~lea
