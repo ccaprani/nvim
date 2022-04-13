@@ -99,6 +99,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'gruvbox-community/gruvbox'
 Plug 'sainnhe/gruvbox-material'
 Plug 'vim-airline/vim-airline'
+Plug 'savq/melange'
 " Tagbar
 Plug 'majutsushi/tagbar'
 " REPL
@@ -117,7 +118,7 @@ Plug 'ray-x/lsp_signature.nvim'
 " Make escaping quicker - no lag
 Plug 'jdhao/better-escape.vim'
 " Code minimap
-Plug 'wfxr/minimap.vim'
+" Plug 'wfxr/minimap.vim'
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
@@ -199,7 +200,7 @@ vnoremap K :m '<-2<CR>gv=gv
 " ---- Plugin Specific Settings
 
 " Better escape
-let g:better_escape_shortcut = ['jk', 'jj', 'kj']
+" let g:better_escape_shortcut = ['jk', 'jj', 'kj']
 
 " Ripple
 " let g:ripple_repls = { "python": ["ipython", "", "", 0] }
@@ -216,10 +217,12 @@ let g:minimap_highlight_search = 1
 nnoremap <leader>mm :MinimapToggle<cr>
 
 " Colorscheme settings
+set termguicolors
 let g:gruvbox_contrast_dark = 'hard'
 let g:gruvbox_invert_selection='0'
 let g:gruvbox_guisp_fallback = "bg"     " For bad spellings to be highlighted
-colorscheme gruvbox
+ colorscheme gruvbox
+" colorscheme melange
 set background=dark
 
 " Tabs
