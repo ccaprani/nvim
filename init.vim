@@ -127,6 +127,9 @@ call plug#end()
 
 " nnoremap <space> za " Folding - open
 
+" Count occurences of last search /
+nnoremap <leader>n :%s///gn <CR>
+
 " Spellings on/off with F6
 map <F2> :setlocal spell! spelllang=en<CR>
 " <C-l> for auto-fix of 1st suggested spelling in INSERT mode
