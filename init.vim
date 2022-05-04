@@ -18,7 +18,6 @@ set nobackup
 set undodir=~/.vim/undodir
 set undofile
 set incsearch
-set termguicolors
 set scrolloff=4
 set noshowmode
 set cmdheight=2     " Give more space for displaying messages.
@@ -26,6 +25,7 @@ set updatetime=50   " Shorter updatetime (default is 4000 ms = 4 s)
 set splitbelow      " Open new split below
 set splitright
 set colorcolumn=80
+set laststatus=3
 highlight ColorColumn ctermbg=0 guibg=lightgrey
 
 let mapleader=" "   " g Leader key
@@ -38,6 +38,7 @@ tnoremap <Esc> <C-\><C-n>
 " Wicked save and close bind
 nnoremap <Leader>q :q!<CR>
 nnoremap <Leader>s :w!<CR>
+nnoremap <Leader>c :bp\|bd #<CR>
 " Session management in vim
 nnoremap <leader>ss :mksession!<CR>
 nnoremap <leader>so :source Session.vim<CR>
@@ -56,8 +57,6 @@ call plug#begin(has('nvim') ? stdpath('data') . '/plugged' : '~/.vim/plugged')
 " File explorer
 Plug 'scrooloose/nerdtree'
 " File search
-" Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-" Plug 'junegunn/fzf.vim'
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
@@ -71,7 +70,6 @@ Plug 'honza/vim-snippets'
 "Startify
 Plug 'mhinz/vim-startify'
 " Code completion
-" Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'hrsh7th/nvim-compe' 
 " lspconfig
 Plug 'neovim/nvim-lspconfig'
@@ -96,10 +94,11 @@ Plug 'psf/black' ", { 'branch': 'stable' }
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 " Themes
-Plug 'gruvbox-community/gruvbox'
-Plug 'sainnhe/gruvbox-material'
+Plug 'morhetz/gruvbox'
+" Plug 'gruvbox-community/gruvbox'
+" Plug 'sainnhe/gruvbox-material'
 Plug 'vim-airline/vim-airline'
-Plug 'savq/melange'
+Plug 'vim-airline/vim-airline-themes'
 " Tagbar
 Plug 'majutsushi/tagbar'
 " REPL
@@ -116,7 +115,7 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend upda
 Plug 'mhartington/formatter.nvim'
 Plug 'ray-x/lsp_signature.nvim' 
 " Make escaping quicker - no lag
-Plug 'jdhao/better-escape.vim'
+"Plug 'jdhao/better-escape.vim'
 " Code minimap
 " Plug 'wfxr/minimap.vim'
 
@@ -202,33 +201,17 @@ vnoremap K :m '<-2<CR>gv=gv
 
 " ---- Plugin Specific Settings
 
-" Better escape
-" let g:better_escape_shortcut = ['jk', 'jj', 'kj']
-
-" Ripple
-" let g:ripple_repls = { "python": ["ipython", "", "", 0] }
-" let g:ripple_delay="500ms"
-" let g:ripple_sleep_hack="500ms"
-" let g:ripple_always_return = 1
-
-" Minimap
-let g:minimap_width = 10
-let g:minimap_auto_start = 0
-let g:minimap_auto_start_win_enter = 0
-let g:minimap_highlight_range = 1
-let g:minimap_highlight_search = 1
-nnoremap <leader>mm :MinimapToggle<cr>
-
 " Colorscheme settings
 set termguicolors
 let g:gruvbox_contrast_dark = 'hard'
 let g:gruvbox_invert_selection='0'
 let g:gruvbox_guisp_fallback = "bg"     " For bad spellings to be highlighted
- colorscheme gruvbox
-" colorscheme melange
+colorscheme gruvbox
 set background=dark
 
 " Tabs
+let g:airline_theme='gruvbox'
+" let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled=1
 let g:airline#extensions#tabline#fnamemode=':t'
 let g:airline#extensions#tabline#buffer_nr_show = 1
@@ -243,10 +226,6 @@ let g:startify_lists = [
           \ { 'type': 'sessions',  'header': ['   Sessions']       },
           \ { 'type': 'bookmarks', 'header': ['   Bookmarks']      },
           \ ]
-" let g:startify_bookmarks = [
-"             \ { 'i': '~/.config/nvim/init.vim' },
-"             " \ { 'p': '~/Google Drive/~Research/Code/Python' },
-"             \ ]
 
 " Tagbar
 nnoremap <silent> <leader>t :TagbarToggle<CR>
@@ -417,12 +396,78 @@ let g:UltiSnipsJumpForwardTrigger = '<tab>'
 let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
 
 "LSP settings
+" nnoremap <silent> gd <cmd>lua vim.lsp.buf.definition()<CR>
+" nnoremap <silent> gD <cmd>lua vim.lsp.buf.declaration()<CR>
+
 lua << EOF
 require'lspconfig'.pyright.setup{}
 require'lspconfig'.texlab.setup{}
+
+-- Mappings.
+-- See `:help vim.diagnostic.*` for documentation on any of the below functions
+local opts = { noremap=true, silent=true }
+vim.api.nvim_set_keymap('n', '<space>e', '<cmd>lua vim.diagnostic.open_float()<CR>', opts)
+vim.api.nvim_set_keymap('n', '[d', '<cmd>lua vim.diagnostic.goto_prev()<CR>', opts)
+vim.api.nvim_set_keymap('n', ']d', '<cmd>lua vim.diagnostic.goto_next()<CR>', opts)
+vim.api.nvim_set_keymap('n', '<space>q', '<cmd>lua vim.diagnostic.setloclist()<CR>', opts)
+
+-- Use an on_attach function to only map the following keys
+-- after the language server attaches to the current buffer
+local on_attach = function(client, bufnr)
+  -- Enable completion triggered by <c-x><c-o>
+  vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
+
+  -- Mappings.
+  -- See `:help vim.lsp.*` for documentation on any of the below functions
+  vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<CR>', opts)
+  vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
+  vim.api.nvim_buf_set_keymap(bufnr, 'n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', opts)
+  vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opts)
+  vim.api.nvim_buf_set_keymap(bufnr, 'n', '<C-k>', '<cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
+  vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>wa', '<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>', opts)
+  vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>wr', '<cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>', opts)
+  vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>wl', '<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>', opts)
+  vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>D', '<cmd>lua vim.lsp.buf.type_definition()<CR>', opts)
+  vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>rn', '<cmd>lua vim.lsp.buf.rename()<CR>', opts)
+  vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>ca', '<cmd>lua vim.lsp.buf.code_action()<CR>', opts)
+  vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', opts)
+  vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
+end
+
+-- Use a loop to conveniently call 'setup' on multiple servers and
+-- map buffer local keybindings when the language server attaches
+local servers = { 'pyright', 'rust_analyzer', 'tsserver' }
+for _, lsp in pairs(servers) do
+  require('lspconfig')[lsp].setup {
+    on_attach = on_attach,
+    flags = {
+      -- This will be the default in neovim 0.7+
+      debounce_text_changes = 150,
+    }
+  }
+end
+
+function PrintDiagnostics(opts, bufnr, line_nr, client_id)
+  bufnr = bufnr or 0
+  line_nr = line_nr or (vim.api.nvim_win_get_cursor(0)[1] - 1)
+  opts = opts or {['lnum'] = line_nr}
+
+  local line_diagnostics = vim.diagnostic.get(bufnr, opts)
+  if vim.tbl_isempty(line_diagnostics) then return end
+
+  local diagnostic_message = ""
+  for i, diagnostic in ipairs(line_diagnostics) do
+    diagnostic_message = diagnostic_message .. string.format("%d: %s", i, diagnostic.message or "")
+    print(diagnostic_message)
+    if i ~= #line_diagnostics then
+      diagnostic_message = diagnostic_message .. "\n"
+    end
+  end
+  vim.api.nvim_echo({{diagnostic_message, "Normal"}}, false, {})
+end
+
+vim.cmd [[ autocmd! CursorHold * lua PrintDiagnostics() ]]
 EOF
-nnoremap <silent> gd <cmd>lua vim.lsp.buf.definition()<CR>
-nnoremap <silent> gD <cmd>lua vim.lsp.buf.declaration()<CR>
 
 " Add support for markdown files in tagbar.
 if has('win32')
