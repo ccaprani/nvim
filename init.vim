@@ -114,10 +114,6 @@ Plug 'chrisbra/csv.vim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
 Plug 'mhartington/formatter.nvim'
 Plug 'ray-x/lsp_signature.nvim' 
-" Make escaping quicker - no lag
-"Plug 'jdhao/better-escape.vim'
-" Code minimap
-" Plug 'wfxr/minimap.vim'
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
@@ -129,6 +125,10 @@ call plug#end()
 
 " Count occurences of last search /
 nnoremap <leader>n :%s///gn <CR>
+
+" increment/decrement numbers
+nnoremap + <C-a>
+nnoremap - <C-x>
 
 " Spellings on/off with F6
 map <F2> :setlocal spell! spelllang=en<CR>
@@ -406,10 +406,10 @@ require'lspconfig'.texlab.setup{}
 -- Mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
 local opts = { noremap=true, silent=true }
-vim.api.nvim_set_keymap('n', '<space>e', '<cmd>lua vim.diagnostic.open_float()<CR>', opts)
+vim.api.nvim_set_keymap('n', '<space>i', '<cmd>lua vim.diagnostic.open_float()<CR>', opts)
 vim.api.nvim_set_keymap('n', '[d', '<cmd>lua vim.diagnostic.goto_prev()<CR>', opts)
 vim.api.nvim_set_keymap('n', ']d', '<cmd>lua vim.diagnostic.goto_next()<CR>', opts)
-vim.api.nvim_set_keymap('n', '<space>q', '<cmd>lua vim.diagnostic.setloclist()<CR>', opts)
+vim.api.nvim_set_keymap('n', '<space>e', '<cmd>lua vim.diagnostic.setloclist()<CR>', opts)
 
 -- Use an on_attach function to only map the following keys
 -- after the language server attaches to the current buffer
@@ -431,12 +431,12 @@ local on_attach = function(client, bufnr)
   vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>rn', '<cmd>lua vim.lsp.buf.rename()<CR>', opts)
   vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>ca', '<cmd>lua vim.lsp.buf.code_action()<CR>', opts)
   vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', opts)
-  vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
+  vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>F', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
 end
 
 -- Use a loop to conveniently call 'setup' on multiple servers and
 -- map buffer local keybindings when the language server attaches
-local servers = { 'pyright', 'rust_analyzer', 'tsserver' }
+local servers = { 'pyright', 'texlab'}
 for _, lsp in pairs(servers) do
   require('lspconfig')[lsp].setup {
     on_attach = on_attach,
@@ -447,26 +447,26 @@ for _, lsp in pairs(servers) do
   }
 end
 
-function PrintDiagnostics(opts, bufnr, line_nr, client_id)
-  bufnr = bufnr or 0
-  line_nr = line_nr or (vim.api.nvim_win_get_cursor(0)[1] - 1)
-  opts = opts or {['lnum'] = line_nr}
+--function PrintDiagnostics(opts, bufnr, line_nr, client_id)
+--  bufnr = bufnr or 0
+--  line_nr = line_nr or (vim.api.nvim_win_get_cursor(0)[1] - 1)
+--  opts = opts or {['lnum'] = line_nr}
+--
+--  local line_diagnostics = vim.diagnostic.get(bufnr, opts)
+--  if vim.tbl_isempty(line_diagnostics) then return end
+--
+--  local diagnostic_message = ""
+--  for i, diagnostic in ipairs(line_diagnostics) do
+--    diagnostic_message = diagnostic_message .. string.format("%d: %s", i, diagnostic.message or "")
+--    print(diagnostic_message)
+--    if i ~= #line_diagnostics then
+--      diagnostic_message = diagnostic_message .. "\n"
+--    end
+--  end
+--  vim.api.nvim_echo({{diagnostic_message, "Normal"}}, false, {})
+--end
 
-  local line_diagnostics = vim.diagnostic.get(bufnr, opts)
-  if vim.tbl_isempty(line_diagnostics) then return end
-
-  local diagnostic_message = ""
-  for i, diagnostic in ipairs(line_diagnostics) do
-    diagnostic_message = diagnostic_message .. string.format("%d: %s", i, diagnostic.message or "")
-    print(diagnostic_message)
-    if i ~= #line_diagnostics then
-      diagnostic_message = diagnostic_message .. "\n"
-    end
-  end
-  vim.api.nvim_echo({{diagnostic_message, "Normal"}}, false, {})
-end
-
-vim.cmd [[ autocmd! CursorHold * lua PrintDiagnostics() ]]
+-- vim.cmd [[ autocmd! CursorHold * lua PrintDiagnostics() ]]
 EOF
 
 " Add support for markdown files in tagbar.
