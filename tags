@@ -4,6 +4,8 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.9~svn20110310	//
++	init.vim	/^nnoremap + <C-a>$/;"	m
+-	init.vim	/^nnoremap - <C-x>$/;"	m
 <	init.vim	/^vnoremap < <gv$/;"	m
 <A-h>	init.vim	/^map <silent> <A-h>    :vertical resize -2<CR>$/;"	m
 <A-j>	init.vim	/^map <silent> <A-j>    :resize -2<CR>$/;"	m
@@ -50,6 +52,7 @@
 <leader>ev	init.vim	/^nnoremap <leader>ev :vsplit $MYVIMRC<cr>$/;"	m
 <leader>f	init.vim	/^nnoremap  <leader>f :NERDTreeToggle<CR>$/;"	m
 <leader>fb	init.vim	/^nnoremap <leader>fb <cmd>Telescope buffers<cr>$/;"	m
+<leader>fb	init.vim	/^nnoremap <leader>fb <cmd>Telescope file_browser<cr>$/;"	m
 <leader>ff	init.vim	/^nnoremap <leader>ff <cmd>Telescope find_files<cr>$/;"	m
 <leader>fg	init.vim	/^nnoremap <leader>fg <cmd>Telescope live_grep<cr>$/;"	m
 <leader>fh	init.vim	/^nnoremap <leader>fh <cmd>Telescope help_tags<cr>$/;"	m
@@ -68,7 +71,6 @@
 <leader>j	the_primeagen_init.vim	/^nnoremap <leader>j :wincmd j<CR>$/;"	m
 <leader>k	the_primeagen_init.vim	/^nnoremap <leader>k :wincmd k<CR>$/;"	m
 <leader>l	the_primeagen_init.vim	/^nnoremap <leader>l :wincmd l<CR>$/;"	m
-<leader>m	init.vim	/^nnoremap <leader>m :MaximizerToggle<CR>$/;"	m
 <leader>n	init.vim	/^nnoremap <leader>n :%s\/\/\/gn <CR>$/;"	m
 <leader>nf	init.vim	/^nmap <leader>nf :NERDTreeFind<CR>$/;"	m
 <leader>pb	init.vim	/^nnoremap <leader>pb :Pandoc! beamer<cr>$/;"	m
@@ -87,6 +89,8 @@
 <leader>vtm	the_primeagen_init.vim	/^nmap <leader>vtm :highlight Pmenu ctermbg=gray guibg=gray$/;"	m
 <leader>vwm	the_primeagen_init.vim	/^nnoremap <leader>vwm :colorscheme gruvbox<bar>:set background=dark<CR>$/;"	m
 <tab>	init.vim	/^vnoremap <tab> >gv$/;"	m
+=	init.vim	/^    mappings = {$/;"	m
+=	init.vim	/^  mappings = {$/;"	m
 >	init.vim	/^vnoremap > >gv$/;"	m
 J	init.vim	/^vnoremap J :m '>+1<CR>gv=gv$/;"	m
 J	the_primeagen_init.vim	/^vnoremap J :m '>+1<CR>gv=gv$/;"	m
@@ -97,7 +101,6 @@ NERDTreeChDirMode	init.vim	/^let NERDTreeChDirMode=2$/;"	v
 NERDTreeDirArrows	init.vim	/^let NERDTreeDirArrows = 1$/;"	v
 NERDTreeMinimalUI	init.vim	/^let NERDTreeMinimalUI = 1$/;"	v
 Prettier	the_primeagen_init.vim	/^command! -nargs=0 Prettier :CocCommand prettier.formatFile$/;"	c
-PrintDiagnostics	init.vim	/^function PrintDiagnostics(opts, bufnr, line_nr, client_id)$/;"	f
 Q	init.vim	/^nnoremap Q <nop> $/;"	m
 TrimWhitespace	the_primeagen_init.vim	/^fun! TrimWhitespace()$/;"	f
 X	the_primeagen_init.vim	/^vnoremap X "_d$/;"	m
@@ -160,6 +163,8 @@ g:gruvbox_contrast_dark	the_primeagen_init.vim	/^let g:gruvbox_contrast_dark = '
 g:gruvbox_guisp_fallback	init.vim	/^let g:gruvbox_guisp_fallback = "bg"     " For bad spellings to be highlighted$/;"	v
 g:gruvbox_invert_selection	init.vim	/^let g:gruvbox_invert_selection='0'$/;"	v
 g:gruvbox_invert_selection	the_primeagen_init.vim	/^let g:gruvbox_invert_selection='0'$/;"	v
+g:md_ctags_bin	init.vim	/^    let g:md_ctags_bin=fnamemodify(stdpath('config')."\/tools\/markdown2ctags.py", ":p")$/;"	v
+g:md_ctags_bin	init.vim	/^    let g:md_ctags_bin=fnamemodify(stdpath('config')."\\\\tools\\\\markdown2ctags.exe", ":p")$/;"	v
 g:netrw_banner	the_primeagen_init.vim	/^let g:netrw_banner = 0$/;"	v
 g:netrw_browse_split	the_primeagen_init.vim	/^let g:netrw_browse_split = 2$/;"	v
 g:netrw_winsize	the_primeagen_init.vim	/^let g:netrw_winsize = 25$/;"	v
@@ -171,9 +176,9 @@ g:pandoc#modules#disabled	init.vim	/^let g:pandoc#modules#disabled = ["folding"]
 g:python3_host_prog	init.vim	/^let g:python3_host_prog = expand('\/usr\/bin\/python')$/;"	v
 g:rg_derive_root	the_primeagen_init.vim	/^    let g:rg_derive_root='true'$/;"	v
 g:startify_lists	init.vim	/^let g:startify_lists = [$/;"	v
+g:tagbar_type_pandoc	init.vim	/^let g:tagbar_type_pandoc = {$/;"	v
 g:tex_conceal	init.vim	/^let g:tex_conceal='abdmg'$/;"	v
 g:tex_flavor	init.vim	/^let g:tex_flavor='latex'$/;"	v
-g:vimspector_enable_mappings	init.vim	/^let g:vimspector_enable_mappings = 'HUMAN'$/;"	v
 g:vimtex_compiler_latexmk	init.vim	/^let g:vimtex_compiler_latexmk = {$/;"	v
 g:vimtex_compiler_progname	init.vim	/^let g:vimtex_compiler_progname="nvr"$/;"	v
 g:vimtex_quickfix_mode	init.vim	/^let g:vimtex_quickfix_mode=2$/;"	v
