@@ -48,6 +48,8 @@ nnoremap <C-q> :qall<CR>
 "Shortcuts to edit and source init.vim in vertical split
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
+" My own mapping for making sentences on One Line only
+nnoremap <leader>ol :%s/\. \(\u\)/\.\r\1/g<cr>
 
 let g:python3_host_prog = expand('/usr/bin/python')
 
@@ -60,6 +62,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
+Plug 'nvim-telescope/telescope-dap.nvim'
 " Latex support
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'lervag/vimtex'
@@ -429,7 +432,7 @@ require("dapui").setup({
       -- Elements can be strings or table with id and size keys.
         { id = "scopes", size = 0.5 },
         --"breakpoints",
-        --  "stacks",
+        "stacks",
         "watches",
       },
       size = 50,
