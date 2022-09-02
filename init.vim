@@ -359,16 +359,13 @@ let g:pandoc#command#autoexec_command = "Pandoc! pdf"
 let g:pandoc#keyboard#use_default_mappings = 1
 "letg:pandoc#command#prefer_pdf
 function! MyPandocOpen(file)
-    " return 'xdg-open '. a:file
     if has('win32')
-       return 'SumatraPDF ' . shellescape(expand(a:file,':p'))
+        return 'SumatraPDF ' . shellescape(expand(a:file,':p'))
     else
-       return 'zathura --synctex-forward'
-                   \. line('.')
-                   \. ':' . col('.')
-                   \. ':' . shellescape(expand('%:p'))
-                   \. shellescape(expand(a:file,':p'))
-    endif
+        let position = line('.') . ":" . col('.') . ":" . expand('%:p') . " "
+        return "zathura -x 'nvr --remote +%{line} %{input}' --synctex-forward " . position . " " . substitute(expand('%:p'),"md$","pdf", "")
+        "" return 'xdg-open '. a:file
+   endif
 endfunction
 
 nnoremap <leader>pt :TOC<cr>
@@ -478,7 +475,7 @@ vim.fn.sign_define('DapBreakpointCondition', { text='⊕', texthl='ErrorMsg', li
 vim.fn.sign_define('DapLogPoint', { text='!!', texthl='ErrorMsg', linehl='', numhl=''})
 vim.fn.sign_define('DapBreakpointRejected', { text='⨷', texthl='ErrorMsg', linehl='', numhl=''})
 
--- Mappings
+-- Mappings (just hit F5 to kick the whole thing off, <leader>dt to terminate)
 vim.keymap.set('n', '<F5>', function() require"dap".continue() end)
 vim.keymap.set('n', '<F6>', function() require"dap".step_over() end)
 vim.keymap.set('n', '<F7>', function() require"dap".step_out() end)
@@ -486,7 +483,7 @@ vim.keymap.set('n', "<F8>", function() require"dap".step_into() end)
 vim.keymap.set('n', '<leader>db', function() require"dap".toggle_breakpoint() end)
 vim.keymap.set('n', '<leader>dB', ":lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition: '))<CR>")
 vim.keymap.set('n', '<leader>dn', function() require"dap".run_to_cursor() end)
-vim.keymap.set('n', '<leader>dc', function() require"dap".terminate() end)
+vim.keymap.set('n', '<leader>dt', function() require"dap".terminate() end)
 vim.keymap.set('n', '<leader>dR', function() require"dap".clear_breakpoints() end)
 vim.keymap.set('n', '<leader>de', function() require"dap".set_exception_breakpoints({"all"}) end)
 vim.keymap.set('n', '<leader>da', function() require"debugHelper".attach() end)

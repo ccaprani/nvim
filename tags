@@ -73,6 +73,7 @@
 <leader>l	the_primeagen_init.vim	/^nnoremap <leader>l :wincmd l<CR>$/;"	m
 <leader>n	init.vim	/^nnoremap <leader>n :%s\/\/\/gn <CR>$/;"	m
 <leader>nf	init.vim	/^nmap <leader>nf :NERDTreeFind<CR>$/;"	m
+<leader>ol	init.vim	/^nnoremap <leader>ol :%s\/\\. \\(\\u\\)\/\\.\\r\\1\/g<cr>$/;"	m
 <leader>pb	init.vim	/^nnoremap <leader>pb :Pandoc! beamer<cr>$/;"	m
 <leader>phw	the_primeagen_init.vim	/^nnoremap <leader>phw :h <C-R>=expand("<cword>")<CR><CR>$/;"	m
 <leader>pl	init.vim	/^nnoremap <leader>pl :Pandoc! latex<cr>$/;"	m
