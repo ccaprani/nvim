@@ -50,6 +50,8 @@ nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 " My own mapping for making sentences on One Line only
 nnoremap <leader>ol :%s/\. \(\u\)/\.\r\1/g<cr>
+" Move precentage way across screen line, [count]gm
+nnoremap <silent> gm :<C-U>exe 'normal! ' . (v:count ? v:count : 49)*winwidth(0)/100 . '\|'<cr>
 
 let g:python3_host_prog = expand('/usr/bin/python')
 
@@ -57,7 +59,9 @@ let g:python3_host_prog = expand('/usr/bin/python')
 call plug#begin(has('nvim') ? stdpath('data') . '/plugged' : '~/.vim/plugged')
 
 " File explorer
-Plug 'scrooloose/nerdtree'
+" Plug 'scrooloose/nerdtree'
+Plug 'nvim-tree/nvim-web-devicons' " optional, for file icons
+Plug 'nvim-tree/nvim-tree.lua'
 " File search
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
@@ -76,6 +80,11 @@ Plug 'mhinz/vim-startify'
 Plug 'hrsh7th/nvim-compe' 
 " lspconfig
 Plug 'neovim/nvim-lspconfig'
+Plug 'ranjithshegde/ccls.nvim'
+"Plug 'm-pilia/vim-ccls'
+" UI stuff
+Plug 'folke/noice.nvim'
+Plug 'MunifTanjim/nui.nvim'
 " The Tim Pope Collection
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary' 
@@ -233,15 +242,14 @@ let g:startify_lists = [
 nnoremap <silent> <leader>t :TagbarToggle<CR>
 
 " Nerdtree
-let NERDTreeMinimalUI = 1
-let NERDTreeDirArrows = 1
-nnoremap  <leader>f :NERDTreeToggle<CR>
-nmap <leader>nf :NERDTreeFind<CR>
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-
-" next few ensure NT opens in current file folder
-set autochdir
-let NERDTreeChDirMode=2
+" let NERDTreeMinimalUI = 1
+" let NERDTreeDirArrows = 1
+" nnoremap  <leader>f :NERDTreeToggle<CR>
+" nmap <leader>nf :NERDTreeFind<CR>
+" autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+" " next few ensure NT opens in current file folder
+" set autochdir
+" let NERDTreeChDirMode=2
 
 " Completion
 set completeopt=menuone,noselect
@@ -281,7 +289,89 @@ lua << EOF
 require("telescope").setup()
 -- you need to call load_extension, somewhere after setup function:
 require("telescope").load_extension(  "file_browser" )
+
+-- disable netrw at the very start of your init.lua (strongly advised)
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
+-- set termguicolors to enable highlight groups
+vim.opt.termguicolors = true
+
+-- empty setup using defaults
+require("nvim-tree").setup({
+    view = {
+        adaptive_size = true,
+        mappings = {
+            list = {
+                { key = "u", action = "dir_up" },
+                {key = "?", action = "toggle_help"},
+                {key="<CR>", action = "edit_no_picker"},
+            },
+        },
+    }
+})
+
+-- C++ LSP config
+require("ccls").setup({
+    lsp = {
+        -- Check `:help vim.lsp.start` for config options.
+        server = {
+            name = "ccls",  -- String name.
+            cmd = { "ccls" },  -- Point to your binary, has to be a table.
+            args = {},
+            -- autostart = false,  -- Does not seem to work here.
+            offset_encoding = "utf-32",  -- Default value set by plugin.
+            root_dir = vim.fs.dirname(vim.fs.find({ "compile_commands.json", ".git" }, { upward = true })[1]),
+            init_options = {
+                index = {
+                    threads = 0;
+                };
+
+                clang = {
+                    excludeArgs = { "-frounding-math" };
+                };
+            },
+            -- |> Fix diagnostics.
+            flags = lsp_flags,
+            -- |> Attach LSP keybindings & other crap.
+            on_attach = aum_general_on_attach,
+            -- |> Add nvim-cmp or snippet completion capabilities.
+            capabilities = completion_capabilities,
+            -- |> Activate custom handlers.
+            handlers = aum_handler_config,
+        },
+    },
+
+    win_config = {
+        -- Sidebar configuration.
+        sidebar = {
+            size = 50,
+            position = "topleft",
+            split = "vnew",
+            width = 50,
+            height = 20,
+        },
+
+        -- Floating window configuration. check :help nvim_open_win for options.
+        float = {
+            style = "minimal",
+            relative = "cursor",
+            width = 50,
+            height = 20,
+            row = 0,
+            col = 0,
+            border = "rounded",
+        },
+    },
+
+    filetypes = {"c", "cpp"},
+})
+
+require("noice").setup({lsp = { signature = { enabled = false }}})
 EOF
+
+" nvim-tree 
+nnoremap <leader>f :NvimTreeToggle<CR>
 
 " Find files using telescope command-line sugar.
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
@@ -350,6 +440,25 @@ let g:vimtex_toc_config = {
     \'split_pos'   : ':vert :botright',
     \'split_width':  50,
     \}
+" Bibtex-tidy, install using:
+" sudo npm install -g bibtex-tidy
+
+nnoremap <localleader>bt :execute "!bibtex-tidy --align --space=4 --duplicates --merge=combine " . fnameescape(expand('%:p'))<cr>
+
+" See vimtex--faq-treesitter
+lua << EOF
+require 'nvim-treesitter.configs'.setup {
+    ignore_install = { "latex" },
+    highlight = {
+        enable = true,
+        -- Setting this to true will run `:h syntax` and tree-sitter at the same time.
+        -- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).
+        -- Using this option may slow down your editor, and you may see some duplicate highlights.
+        -- Instead of true it can also be a list of languages
+        additional_vim_regex_highlighting = false,
+    },
+}
+EOF
 
 "Pandoc
 let g:pandoc#filetypes#handled = ["pandoc", "markdown", "rst"]
@@ -371,6 +480,8 @@ endfunction
 nnoremap <leader>pt :TOC<cr>
 nnoremap <leader>pl :Pandoc! latex<cr>
 nnoremap <leader>pb :Pandoc! beamer<cr>
+nnoremap <leader>pd :!pandoc -s -o %:r.pdf % -V papersize:A4<cr>
+nnoremap <leader>po :!zathura %:r.pdf&<cr><cr>
 
 " Ultisnips
 if has('win32')
@@ -401,7 +512,6 @@ vim.keymap.set('n', '<leader>ds', ':Telescope dap frames<CR>')
 vim.keymap.set('n', '<leader>dc', ':Telescope dap commands<CR>')
 vim.keymap.set('n', '<leader>db', ':Telescope dap list_breakpoints<CR>')
 
--- require('dap-python').setup('~/.virtualenvs/debugpy/bin/python')
 require('dap-python').setup('~/anaconda3/bin/python')
 require('dap-python').test_runner = 'pytest'
 require("dapui").setup({
@@ -457,6 +567,8 @@ require("dapui").setup({
     max_type_length = nil, -- Can be integer or nil.
   }
 })
+-- 
+
 -- dap gui auto listenting to dap events
 local dap, dapui = require("dap"), require("dapui")
 dap.listeners.after.event_initialized["dapui_config"] = function()
@@ -468,6 +580,7 @@ end
 dap.listeners.before.event_exited["dapui_config"] = function()
   dapui.close()
 end
+
 -- pretty gutter icons
 vim.fn.sign_define('DapStopped', { text='▶', texthl='WarningMsg',linehl='DapUIBreakpointsCurrentLine', numhl='ModeMsg'})
 vim.fn.sign_define('DapBreakpoint', { text='●', texthl='ErrorMsg', linehl='', numhl=''})
@@ -500,6 +613,8 @@ EOF
 lua << EOF
 require'lspconfig'.pyright.setup{}
 require'lspconfig'.texlab.setup{}
+-- sudo snap install ccls --classic
+require'lspconfig'.ccls.setup{}
 
 -- Mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
@@ -517,24 +632,24 @@ local on_attach = function(client, bufnr)
 
   -- Mappings.
   -- See `:help vim.lsp.*` for documentation on any of the below functions
-  vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<CR>', opts)
   vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
-  vim.api.nvim_buf_set_keymap(bufnr, 'n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', opts)
+  vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<CR>', opts)
+  vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', opts)
   vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opts)
+  vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>rn', '<cmd>lua vim.lsp.buf.rename()<CR>', opts)
+  vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>F', '<cmd>lua vim.lsp.buf.format{async=true}<CR>', opts)
+  vim.api.nvim_buf_set_keymap(bufnr, 'n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', opts)
   vim.api.nvim_buf_set_keymap(bufnr, 'n', '<C-k>', '<cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
   vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>wa', '<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>', opts)
   vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>wr', '<cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>', opts)
   vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>wl', '<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>', opts)
   vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>D', '<cmd>lua vim.lsp.buf.type_definition()<CR>', opts)
-  vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>rn', '<cmd>lua vim.lsp.buf.rename()<CR>', opts)
   vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>ca', '<cmd>lua vim.lsp.buf.code_action()<CR>', opts)
-  vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', opts)
-  vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>F', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
 end
 
 -- Use a loop to conveniently call 'setup' on multiple servers and
 -- map buffer local keybindings when the language server attaches
-local servers = { 'pyright', 'texlab'}
+local servers = { 'pyright', 'texlab', 'ccls'}
 for _, lsp in pairs(servers) do
   require('lspconfig')[lsp].setup {
     on_attach = on_attach,
