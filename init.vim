@@ -28,31 +28,6 @@ set colorcolumn=80
 set laststatus=3
 highlight ColorColumn ctermbg=0 guibg=lightgrey
 
-let mapleader=" "   " g Leader key
-let maplocalleader=" "
-nnoremap <Space> <Nop>  
-" avoid getting into ex mode accidently
-nnoremap Q <nop> 
-" let localleader=" "
-tnoremap <Esc> <C-\><C-n>
-" Wicked save and close bind
-nnoremap <Leader>q :q!<CR>
-nnoremap <Leader>s :w!<CR>
-nnoremap <Leader>c :bp\|bd #<CR>
-" Session management in vim
-nnoremap <leader>ss :mksession!<CR>
-nnoremap <leader>so :source Session.vim<CR>
-" Shorcuts to save and quit a session
-nnoremap <C-s> :wall<cr>
-nnoremap <C-q> :qall<CR>
-"Shortcuts to edit and source init.vim in vertical split
-nnoremap <leader>ev :vsplit $MYVIMRC<cr>
-nnoremap <leader>sv :source $MYVIMRC<cr>
-" My own mapping for making sentences on One Line only
-nnoremap <leader>ol :%s/\. \(\u\)/\.\r\1/g<cr>
-" Move precentage way across screen line, [count]gm
-nnoremap <silent> gm :<C-U>exe 'normal! ' . (v:count ? v:count : 49)*winwidth(0)/100 . '\|'<cr>
-
 let g:python3_host_prog = expand('/usr/bin/python')
 
 " Plugins will be downloaded under the specified directory.
@@ -83,8 +58,8 @@ Plug 'neovim/nvim-lspconfig'
 Plug 'ranjithshegde/ccls.nvim'
 "Plug 'm-pilia/vim-ccls'
 " UI stuff
-Plug 'folke/noice.nvim'
-Plug 'MunifTanjim/nui.nvim'
+" Plug 'folke/noice.nvim'
+" Plug 'MunifTanjim/nui.nvim'
 " The Tim Pope Collection
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary' 
@@ -125,6 +100,8 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend upda
 Plug 'nvim-telescope/telescope-file-browser.nvim'
 Plug 'mhartington/formatter.nvim'
 Plug 'ray-x/lsp_signature.nvim' 
+" Whichkey
+Plug 'folke/which-key.nvim'
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
@@ -132,14 +109,120 @@ call plug#end()
 
 " ---- VIM-ONLY KEY BINDINGS ----
 
+let mapleader=" "
+let maplocalleader=" "
+
+lua << EOF
+require("which-key").setup {
+-- your configuration comes here
+-- or leave it empty to use the default settings
+-- refer to the configuration section below
+}
+
+local wk = require("which-key")
+
+wk.register({
+    -- Save and close binds
+    q = { ":q!<CR>", "Quit" },
+    s = {":w!<CR>", "Save"},
+    c = {":bdelete<CR>", "Close"},
+    -- c = {":bp\\|bd #<CR>", "Close"},
+
+    -- Session management
+    S = {
+        name = "+Session",
+        s = {":mksession!<CR>", "Make session"},
+        o = {":sourse Session.vim<CR>", "Source session"},
+        },
+
+    -- Init editing
+    v = {
+        name = "+Vim",
+        e = {":vsplit $MYVIMRC<CR>", "Edit vimrc" },
+        s = {":source $MYVIMRC<CR>", "Source vimrc" },
+        },
+
+    -- Pandoc
+    p = {
+        name = "+Pandoc",
+        t = {":TOC<cr>", "Open TOC"},
+        l = {":Pandoc! latex<cr>", "LaTeX compilation"},
+        b = {":Pandoc! beamer<cr>","Beamer compilation"},
+        d = {":!pandoc -s -o %:r.pdf % -V papersize:A4<cr>", "Compile A4 document"},
+        o = {":!zathura %:r.pdf&<cr><cr>","Open in Zathura"},
+        },
+
+    -- My own mapping for making sentences on One Line only
+    ["ol"] = {":%s/\\. \\(\\u\\)/\\.\\r\\1/g<cr>", "One sentence per line" },
+
+    -- Count occurences of last search /
+    n = { ":%s///gn <CR>", "Count last search" },
+
+    -- Increment/decrement numbers
+    ["+"] = {"<C-a>", "Increment number"},
+    ["-"] = {"<C-x>", "Decrement number"},
+
+}, { prefix = "<leader>" })
+
+-- These do not have <leader>
+wk.register({
+
+    -- Avoid getting into Ex mode accidently
+    Q = {"<nop>", "Avoid accidental Ex mode"},
+
+    -- Shorcuts to save and quit a session
+    ["<C-s>"] = {":wall<CR>", "Save all"},
+    ["<C-q>"] = {":qall<CR>", "Quit all"},
+
+    -- Move percentage
+    ["gm"] = {"<silent> gm :<C-U>exe 'normal! ' . (v:count ? v:count : 49)*winwidth(0)/100 . '\\|'<cr>", "Move percentage across screen line"}
+
+}, {})
+
+-- The function is called `t` for `termcodes`.
+local function t(str)
+    -- Adjust boolean arguments as needed
+    return vim.api.nvim_replace_termcodes(str, true, true, true)
+end
+
+-- Terminal mode
+wk.register({
+    ["<Esc>"] = { t("<C-\\><C-N>"),  "Escape terminal mode" },
+},{mode='t'})
+
+EOF
+
 " nnoremap <space> za " Folding - open
+"
+" nnoremap <Space> <Nop>  
+" avoid getting into ex mode accidently
+" nnoremap Q <nop> 
+" let localleader=" "
+" tnoremap <Esc> <C-\><C-n>
+" Wicked save and close bind
+" nnoremap <Leader>q :q!<CR>
+" nnoremap <Leader>s :w!<CR>
+" nnoremap <Leader>c :bp\|bd #<CR>
+" Session management in vim
+" nnoremap <leader>ss :mksession!<CR>
+" nnoremap <leader>so :source Session.vim<CR>
+" Shorcuts to save and quit a session
+" nnoremap <C-s> :wall<cr>
+" nnoremap <C-q> :qall<CR>
+"Shortcuts to edit and source init.vim in vertical split
+" nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+" nnoremap <leader>sv :source $MYVIMRC<cr>
+" My own mapping for making sentences on One Line only
+" nnoremap <leader>ol :%s/\. \(\u\)/\.\r\1/g<cr>
+" Move precentage way across screen line, [count]gm
+" nnoremap <silent> gm :<C-U>exe 'normal! ' . (v:count ? v:count : 49)*winwidth(0)/100 . '\|'<cr>
 
 " Count occurences of last search /
-nnoremap <leader>n :%s///gn <CR>
+" nnoremap <leader>n :%s///gn <CR>
 
 " increment/decrement numbers
-nnoremap + <C-a>
-nnoremap - <C-x>
+" nnoremap + <C-a>
+" nnoremap - <C-x>
 
 " Spellings on/off with F6
 map <F2> :setlocal spell! spelllang=en<CR>
@@ -148,6 +231,7 @@ inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u
 
 " System Clipboard shortcuts
 noremap <Leader>y "+y
+noremap <Leader>x "+x
 noremap <Leader>p "+p
 
 " Better window navigation
@@ -217,6 +301,7 @@ set termguicolors
 let g:gruvbox_contrast_dark = 'hard'
 let g:gruvbox_invert_selection='0'
 let g:gruvbox_guisp_fallback = "bg"     " For bad spellings to be highlighted
+let g:gruvbox_italic=1
 colorscheme gruvbox
 set background=dark
 
@@ -294,9 +379,6 @@ require("telescope").load_extension(  "file_browser" )
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
--- set termguicolors to enable highlight groups
-vim.opt.termguicolors = true
-
 -- empty setup using defaults
 require("nvim-tree").setup({
     view = {
@@ -342,32 +424,32 @@ require("ccls").setup({
         },
     },
 
-    win_config = {
-        -- Sidebar configuration.
-        sidebar = {
-            size = 50,
-            position = "topleft",
-            split = "vnew",
-            width = 50,
-            height = 20,
-        },
-
-        -- Floating window configuration. check :help nvim_open_win for options.
-        float = {
-            style = "minimal",
-            relative = "cursor",
-            width = 50,
-            height = 20,
-            row = 0,
-            col = 0,
-            border = "rounded",
-        },
-    },
+--    win_config = {
+--        -- Sidebar configuration.
+--        sidebar = {
+--            size = 50,
+--            position = "topleft",
+--            split = "vnew",
+--            width = 50,
+--            height = 20,
+--        },
+--
+--        -- Floating window configuration. check :help nvim_open_win for options.
+--        float = {
+--            style = "minimal",
+--            relative = "cursor",
+--            width = 50,
+--            height = 20,
+--            row = 0,
+--            col = 0,
+--            border = "rounded",
+--        },
+--    },
 
     filetypes = {"c", "cpp"},
 })
 
-require("noice").setup({lsp = { signature = { enabled = false }}})
+-- require("noice").setup({lsp = { signature = { enabled = false }}})
 EOF
 
 " nvim-tree 
@@ -448,15 +530,13 @@ nnoremap <localleader>bt :execute "!bibtex-tidy --align --space=4 --duplicates -
 " See vimtex--faq-treesitter
 lua << EOF
 require 'nvim-treesitter.configs'.setup {
-    ignore_install = { "latex" },
+    ensure_installed = { "markdown" },
     highlight = {
-        enable = true,
-        -- Setting this to true will run `:h syntax` and tree-sitter at the same time.
-        -- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).
-        -- Using this option may slow down your editor, and you may see some duplicate highlights.
-        -- Instead of true it can also be a list of languages
-        additional_vim_regex_highlighting = false,
+           enable = true,
+           disable = { "latex" },
+           additional_vim_regex_highlighting = { "latex", "markdown" },
     },
+    --other treesitter settings
 }
 EOF
 
@@ -477,11 +557,11 @@ function! MyPandocOpen(file)
    endif
 endfunction
 
-nnoremap <leader>pt :TOC<cr>
-nnoremap <leader>pl :Pandoc! latex<cr>
-nnoremap <leader>pb :Pandoc! beamer<cr>
-nnoremap <leader>pd :!pandoc -s -o %:r.pdf % -V papersize:A4<cr>
-nnoremap <leader>po :!zathura %:r.pdf&<cr><cr>
+" nnoremap <leader>pt :TOC<cr>
+" nnoremap <leader>pl :Pandoc! latex<cr>
+" nnoremap <leader>pb :Pandoc! beamer<cr>
+" nnoremap <leader>pd :!pandoc -s -o %:r.pdf % -V papersize:A4<cr>
+" nnoremap <leader>po :!zathura %:r.pdf&<cr><cr>
 
 " Ultisnips
 if has('win32')
@@ -681,6 +761,8 @@ end
 
 -- vim.cmd [[ autocmd! CursorHold * lua PrintDiagnostics() ]]
 EOF
+
+
 
 " Add support for markdown files in tagbar.
 if has('win32')
