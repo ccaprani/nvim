@@ -37,6 +37,7 @@ call plug#begin(has('nvim') ? stdpath('data') . '/plugged' : '~/.vim/plugged')
 " Plug 'scrooloose/nerdtree'
 Plug 'nvim-tree/nvim-web-devicons' " optional, for file icons
 Plug 'nvim-tree/nvim-tree.lua'
+Plug 'akinsho/bufferline.nvim', { 'tag': '*' }
 " File search
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
@@ -113,6 +114,10 @@ let mapleader=" "
 let maplocalleader=" "
 
 lua << EOF
+
+vim.opt.termguicolors = true
+require("bufferline").setup{}
+
 require("which-key").setup {
 -- your configuration comes here
 -- or leave it empty to use the default settings
@@ -155,6 +160,10 @@ wk.register({
     -- My own mapping for making sentences on One Line only
     ["ol"] = {":%s/\\. \\(\\u\\)/\\.\\r\\1/g<cr>", "One sentence per line" },
 
+    -- Change visual highlight to title case
+    --["tc"] = {":s/\\%V\\<\\(\\w\\)\\(\\S*\\)/\\u\\1\\L\\2/g","Visual selection to Title Case"},
+    --["tc"] = {":%s/item/mine/g<cr>","Visual selection to Title Case", mode='v'},
+
     -- Count occurences of last search /
     n = { ":%s///gn <CR>", "Count last search" },
 
@@ -175,7 +184,11 @@ wk.register({
     ["<C-q>"] = {":qall<CR>", "Quit all"},
 
     -- Move percentage
-    ["gm"] = {"<silent> gm :<C-U>exe 'normal! ' . (v:count ? v:count : 49)*winwidth(0)/100 . '\\|'<cr>", "Move percentage across screen line"}
+    ["gm"] = {"<silent> gm :<C-U>exe 'normal! ' . (v:count ? v:count : 49)*winwidth(0)/100 . '\\|'<cr>", "Move percentage across screen line"},
+
+    -- Bufferlinepick
+    ["gb"] = {"<silent> gb :BufferLinePick<CR>", "Buffer pick"},
+    ["gD"] = {"<silent> gb :BufferLinePickClose<CR>", "Buffer pick close"},
 
 }, {})
 
@@ -379,18 +392,31 @@ require("telescope").load_extension(  "file_browser" )
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
+-- Please see https://github.com/nvim-tree/nvim-tree.lua/wiki/Migrating-To-on_attach for assistance in migrating.
+local function on_attach(bufnr)
+  local api = require('nvim-tree.api')
+
+  local function opts(desc)
+    return { desc = 'nvim-tree: ' .. desc, buffer = bufnr, noremap = true, silent = true, nowait = true }
+  end
+
+  -- Default mappings
+  api.config.mappings.default_on_attach(bufnr)
+
+  -- Mappings migrated from view.mappings.list
+  --
+  -- You will need to insert "your code goes here" for any mappings with a custom action_cb
+  vim.keymap.set('n', 'u', api.tree.change_root_to_parent, opts('Up'))
+  vim.keymap.set('n', '?', api.tree.toggle_help, opts('Help'))
+  vim.keymap.set('n', '<CR>', api.node.open.no_window_picker, opts('Open: No Window Picker'))
+end
+
 -- empty setup using defaults
 require("nvim-tree").setup({
+    on_attach = on_attach,
     view = {
-        adaptive_size = true,
-        mappings = {
-            list = {
-                { key = "u", action = "dir_up" },
-                {key = "?", action = "toggle_help"},
-                {key="<CR>", action = "edit_no_picker"},
-            },
+        adaptive_size = false,
         },
-    }
 })
 
 -- C++ LSP config
