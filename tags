@@ -87,7 +87,6 @@
 <localleader>bt	init.vim	/^nnoremap <localleader>bt :execute "!bibtex-tidy --align --space=4 --duplicates --merge=combine " . fnameescape(expand('%:p'))<cr>$/;"	m
 <tab>	init.vim	/^vnoremap <tab> >gv$/;"	m
 =	init.vim	/^            cmd = { "ccls" },  -- Point to your binary, has to be a table.$/;"	m
-=	init.vim	/^        mappings = {$/;"	m
 =	init.vim	/^    mappings = {$/;"	m
 =	init.vim	/^  mappings = {$/;"	m
 >	init.vim	/^vnoremap > >gv$/;"	m
