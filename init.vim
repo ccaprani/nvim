@@ -654,7 +654,7 @@ nnoremap <localleader>bt :execute "!bibtex-tidy --align --space=4 --duplicates -
 " See vimtex--faq-treesitter
 lua << EOF
 require 'nvim-treesitter.configs'.setup {
-    ensure_installed = { "markdown" },
+    ensure_installed = { "c", "cpp", "python", "lua", "help", "vim", "cmake", "markdown" },
     highlight = {
            enable = true,
            disable = { "latex" },

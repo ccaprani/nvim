@@ -418,29 +418,29 @@ FP_ILOGB0	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@math.h	207;"	d
 FP_ILOGB0	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@math.h	209;"	d
 FP_ILOGBNAN	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@math.h	212;"	d
 FP_ILOGBNAN	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@math.h	214;"	d
-FP_INFINITE	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@math.h	/^    FP_INFINITE =$/;"	e	enum:__anon10
+FP_INFINITE	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@math.h	/^    FP_INFINITE =$/;"	e	enum:__anon21
 FP_INFINITE	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@math.h	940;"	d
-FP_INT_DOWNWARD	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@math.h	/^    FP_INT_DOWNWARD =$/;"	e	enum:__anon9
+FP_INT_DOWNWARD	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@math.h	/^    FP_INT_DOWNWARD =$/;"	e	enum:__anon20
 FP_INT_DOWNWARD	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@math.h	257;"	d
-FP_INT_TONEAREST	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@math.h	/^    FP_INT_TONEAREST =$/;"	e	enum:__anon9
+FP_INT_TONEAREST	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@math.h	/^    FP_INT_TONEAREST =$/;"	e	enum:__anon20
 FP_INT_TONEAREST	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@math.h	266;"	d
-FP_INT_TONEARESTFROMZERO	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@math.h	/^    FP_INT_TONEARESTFROMZERO =$/;"	e	enum:__anon9
+FP_INT_TONEARESTFROMZERO	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@math.h	/^    FP_INT_TONEARESTFROMZERO =$/;"	e	enum:__anon20
 FP_INT_TONEARESTFROMZERO	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@math.h	263;"	d
-FP_INT_TOWARDZERO	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@math.h	/^    FP_INT_TOWARDZERO =$/;"	e	enum:__anon9
+FP_INT_TOWARDZERO	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@math.h	/^    FP_INT_TOWARDZERO =$/;"	e	enum:__anon20
 FP_INT_TOWARDZERO	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@math.h	260;"	d
-FP_INT_UPWARD	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@math.h	/^    FP_INT_UPWARD =$/;"	e	enum:__anon9
+FP_INT_UPWARD	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@math.h	/^    FP_INT_UPWARD =$/;"	e	enum:__anon20
 FP_INT_UPWARD	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@math.h	254;"	d
 FP_LLOGB0	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@math.h	224;"	d
 FP_LLOGB0	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@math.h	226;"	d
 FP_LLOGBNAN	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@math.h	229;"	d
 FP_LLOGBNAN	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@math.h	231;"	d
-FP_NAN	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@math.h	/^    FP_NAN =$/;"	e	enum:__anon10
+FP_NAN	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@math.h	/^    FP_NAN =$/;"	e	enum:__anon21
 FP_NAN	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@math.h	937;"	d
-FP_NORMAL	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@math.h	/^    FP_NORMAL =$/;"	e	enum:__anon10
+FP_NORMAL	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@math.h	/^    FP_NORMAL =$/;"	e	enum:__anon21
 FP_NORMAL	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@math.h	949;"	d
-FP_SUBNORMAL	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@math.h	/^    FP_SUBNORMAL =$/;"	e	enum:__anon10
+FP_SUBNORMAL	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@math.h	/^    FP_SUBNORMAL =$/;"	e	enum:__anon21
 FP_SUBNORMAL	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@math.h	946;"	d
-FP_ZERO	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@math.h	/^    FP_ZERO =$/;"	e	enum:__anon10
+FP_ZERO	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@math.h	/^    FP_ZERO =$/;"	e	enum:__anon21
 FP_ZERO	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@math.h	943;"	d
 Fatigue	.ccls-cache/@@home@ccaprani@.config@nvim/@home@ccaprani@projects@btls@cpp@include@ConfigData.h	/^        } Fatigue;$/;"	m	struct:CConfigDataCore::Output_Config	typeref:struct:CConfigDataCore::Output_Config::Fatigue_Config
 Fatigue_Config	.ccls-cache/@@home@ccaprani@.config@nvim/@home@ccaprani@projects@btls@cpp@include@ConfigData.h	/^        struct Fatigue_Config$/;"	s	struct:CConfigDataCore::Output_Config
@@ -1823,33 +1823,33 @@ _ISOC95_SOURCE	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@features.h	
 _ISOC95_SOURCE	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@features.h	202;"	d
 _ISOC99_SOURCE	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@features.h	203;"	d
 _ISOC99_SOURCE	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@features.h	204;"	d
-_ISalnum	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@ctype.h	/^  _ISalnum = _ISbit (11)	\/* Alphanumeric.  *\/$/;"	e	enum:__anon25
-_ISalpha	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@ctype.h	/^  _ISalpha = _ISbit (2),	\/* Alphabetic.  *\/$/;"	e	enum:__anon25
+_ISalnum	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@ctype.h	/^  _ISalnum = _ISbit (11)	\/* Alphanumeric.  *\/$/;"	e	enum:__anon4
+_ISalpha	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@ctype.h	/^  _ISalpha = _ISbit (2),	\/* Alphabetic.  *\/$/;"	e	enum:__anon4
 _ISbit	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@ctype.h	41;"	d
-_ISblank	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@ctype.h	/^  _ISblank = _ISbit (8),	\/* Blank (usually SPC and TAB).  *\/$/;"	e	enum:__anon25
-_IScntrl	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@ctype.h	/^  _IScntrl = _ISbit (9),	\/* Control character.  *\/$/;"	e	enum:__anon25
-_ISdigit	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@ctype.h	/^  _ISdigit = _ISbit (3),	\/* Numeric.  *\/$/;"	e	enum:__anon25
-_ISgraph	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@ctype.h	/^  _ISgraph = _ISbit (7),	\/* Graphical.  *\/$/;"	e	enum:__anon25
-_ISlower	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@ctype.h	/^  _ISlower = _ISbit (1),	\/* lowercase.  *\/$/;"	e	enum:__anon25
-_ISprint	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@ctype.h	/^  _ISprint = _ISbit (6),	\/* Printing.  *\/$/;"	e	enum:__anon25
-_ISpunct	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@ctype.h	/^  _ISpunct = _ISbit (10),	\/* Punctuation.  *\/$/;"	e	enum:__anon25
-_ISspace	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@ctype.h	/^  _ISspace = _ISbit (5),	\/* Whitespace.  *\/$/;"	e	enum:__anon25
-_ISupper	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@ctype.h	/^  _ISupper = _ISbit (0),	\/* UPPERCASE.  *\/$/;"	e	enum:__anon25
-_ISwalnum	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@wctype-wchar.h	/^  _ISwalnum = _ISwbit (__ISwalnum)	\/* Alphanumeric.  *\/$/;"	e	enum:__anon8
-_ISwalpha	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@wctype-wchar.h	/^  _ISwalpha = _ISwbit (__ISwalpha),	\/* Alphabetic.  *\/$/;"	e	enum:__anon8
+_ISblank	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@ctype.h	/^  _ISblank = _ISbit (8),	\/* Blank (usually SPC and TAB).  *\/$/;"	e	enum:__anon4
+_IScntrl	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@ctype.h	/^  _IScntrl = _ISbit (9),	\/* Control character.  *\/$/;"	e	enum:__anon4
+_ISdigit	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@ctype.h	/^  _ISdigit = _ISbit (3),	\/* Numeric.  *\/$/;"	e	enum:__anon4
+_ISgraph	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@ctype.h	/^  _ISgraph = _ISbit (7),	\/* Graphical.  *\/$/;"	e	enum:__anon4
+_ISlower	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@ctype.h	/^  _ISlower = _ISbit (1),	\/* lowercase.  *\/$/;"	e	enum:__anon4
+_ISprint	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@ctype.h	/^  _ISprint = _ISbit (6),	\/* Printing.  *\/$/;"	e	enum:__anon4
+_ISpunct	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@ctype.h	/^  _ISpunct = _ISbit (10),	\/* Punctuation.  *\/$/;"	e	enum:__anon4
+_ISspace	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@ctype.h	/^  _ISspace = _ISbit (5),	\/* Whitespace.  *\/$/;"	e	enum:__anon4
+_ISupper	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@ctype.h	/^  _ISupper = _ISbit (0),	\/* UPPERCASE.  *\/$/;"	e	enum:__anon4
+_ISwalnum	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@wctype-wchar.h	/^  _ISwalnum = _ISwbit (__ISwalnum)	\/* Alphanumeric.  *\/$/;"	e	enum:__anon7
+_ISwalpha	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@wctype-wchar.h	/^  _ISwalpha = _ISwbit (__ISwalpha),	\/* Alphabetic.  *\/$/;"	e	enum:__anon7
 _ISwbit	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@wctype-wchar.h	47;"	d
 _ISwbit	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@wctype-wchar.h	49;"	d
-_ISwblank	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@wctype-wchar.h	/^  _ISwblank = _ISwbit (__ISwblank),	\/* Blank (usually SPC and TAB).  *\/$/;"	e	enum:__anon8
-_ISwcntrl	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@wctype-wchar.h	/^  _ISwcntrl = _ISwbit (__ISwcntrl),	\/* Control character.  *\/$/;"	e	enum:__anon8
-_ISwdigit	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@wctype-wchar.h	/^  _ISwdigit = _ISwbit (__ISwdigit),	\/* Numeric.  *\/$/;"	e	enum:__anon8
-_ISwgraph	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@wctype-wchar.h	/^  _ISwgraph = _ISwbit (__ISwgraph),	\/* Graphical.  *\/$/;"	e	enum:__anon8
-_ISwlower	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@wctype-wchar.h	/^  _ISwlower = _ISwbit (__ISwlower),	\/* lowercase.  *\/$/;"	e	enum:__anon8
-_ISwprint	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@wctype-wchar.h	/^  _ISwprint = _ISwbit (__ISwprint),	\/* Printing.  *\/$/;"	e	enum:__anon8
-_ISwpunct	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@wctype-wchar.h	/^  _ISwpunct = _ISwbit (__ISwpunct),	\/* Punctuation.  *\/$/;"	e	enum:__anon8
-_ISwspace	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@wctype-wchar.h	/^  _ISwspace = _ISwbit (__ISwspace),	\/* Whitespace.  *\/$/;"	e	enum:__anon8
-_ISwupper	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@wctype-wchar.h	/^  _ISwupper = _ISwbit (__ISwupper),	\/* UPPERCASE.  *\/$/;"	e	enum:__anon8
-_ISwxdigit	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@wctype-wchar.h	/^  _ISwxdigit = _ISwbit (__ISwxdigit),	\/* Hexadecimal numeric.  *\/$/;"	e	enum:__anon8
-_ISxdigit	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@ctype.h	/^  _ISxdigit = _ISbit (4),	\/* Hexadecimal numeric.  *\/$/;"	e	enum:__anon25
+_ISwblank	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@wctype-wchar.h	/^  _ISwblank = _ISwbit (__ISwblank),	\/* Blank (usually SPC and TAB).  *\/$/;"	e	enum:__anon7
+_ISwcntrl	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@wctype-wchar.h	/^  _ISwcntrl = _ISwbit (__ISwcntrl),	\/* Control character.  *\/$/;"	e	enum:__anon7
+_ISwdigit	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@wctype-wchar.h	/^  _ISwdigit = _ISwbit (__ISwdigit),	\/* Numeric.  *\/$/;"	e	enum:__anon7
+_ISwgraph	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@wctype-wchar.h	/^  _ISwgraph = _ISwbit (__ISwgraph),	\/* Graphical.  *\/$/;"	e	enum:__anon7
+_ISwlower	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@wctype-wchar.h	/^  _ISwlower = _ISwbit (__ISwlower),	\/* lowercase.  *\/$/;"	e	enum:__anon7
+_ISwprint	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@wctype-wchar.h	/^  _ISwprint = _ISwbit (__ISwprint),	\/* Printing.  *\/$/;"	e	enum:__anon7
+_ISwpunct	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@wctype-wchar.h	/^  _ISwpunct = _ISwbit (__ISwpunct),	\/* Punctuation.  *\/$/;"	e	enum:__anon7
+_ISwspace	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@wctype-wchar.h	/^  _ISwspace = _ISwbit (__ISwspace),	\/* Whitespace.  *\/$/;"	e	enum:__anon7
+_ISwupper	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@wctype-wchar.h	/^  _ISwupper = _ISwbit (__ISwupper),	\/* UPPERCASE.  *\/$/;"	e	enum:__anon7
+_ISwxdigit	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@wctype-wchar.h	/^  _ISwxdigit = _ISwbit (__ISwxdigit),	\/* Hexadecimal numeric.  *\/$/;"	e	enum:__anon7
+_ISxdigit	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@ctype.h	/^  _ISxdigit = _ISbit (4),	\/* Hexadecimal numeric.  *\/$/;"	e	enum:__anon4
 _Iter_comp_iter	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@c++@11@bits@predefined_ops.h	/^      _Iter_comp_iter(_Compare __comp)$/;"	f	struct:__gnu_cxx::__ops::_Iter_comp_iter
 _Iter_comp_iter	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@c++@11@bits@predefined_ops.h	/^    struct _Iter_comp_iter$/;"	s	namespace:__gnu_cxx::__ops
 _Iter_comp_to_iter	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@c++@11@bits@predefined_ops.h	/^      _Iter_comp_to_iter(_Compare __comp, _Iterator1 __it1)$/;"	f	struct:__gnu_cxx::__ops::_Iter_comp_to_iter
@@ -2719,18 +2719,18 @@ __INT_LEAST8_MIN	.ccls-cache/@@home@ccaprani@.config@nvim/@snap@ccls@90@usr@lib@
 __INT_LEAST8_MIN	.ccls-cache/@@home@ccaprani@.config@nvim/@snap@ccls@90@usr@lib@llvm-7@lib@clang@7.0.0@include@stdint.h	635;"	d
 __INT_N	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@c++@11@bits@cpp_type_traits.h	255;"	d
 __INT_N	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@c++@11@bits@cpp_type_traits.h	282;"	d
-__ISwalnum	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@wctype-wchar.h	/^  __ISwalnum = 11,			\/* Alphanumeric.  *\/$/;"	e	enum:__anon8
-__ISwalpha	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@wctype-wchar.h	/^  __ISwalpha = 2,			\/* Alphabetic.  *\/$/;"	e	enum:__anon8
-__ISwblank	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@wctype-wchar.h	/^  __ISwblank = 8,			\/* Blank (usually SPC and TAB).  *\/$/;"	e	enum:__anon8
-__ISwcntrl	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@wctype-wchar.h	/^  __ISwcntrl = 9,			\/* Control character.  *\/$/;"	e	enum:__anon8
-__ISwdigit	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@wctype-wchar.h	/^  __ISwdigit = 3,			\/* Numeric.  *\/$/;"	e	enum:__anon8
-__ISwgraph	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@wctype-wchar.h	/^  __ISwgraph = 7,			\/* Graphical.  *\/$/;"	e	enum:__anon8
-__ISwlower	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@wctype-wchar.h	/^  __ISwlower = 1,			\/* lowercase.  *\/$/;"	e	enum:__anon8
-__ISwprint	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@wctype-wchar.h	/^  __ISwprint = 6,			\/* Printing.  *\/$/;"	e	enum:__anon8
-__ISwpunct	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@wctype-wchar.h	/^  __ISwpunct = 10,			\/* Punctuation.  *\/$/;"	e	enum:__anon8
-__ISwspace	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@wctype-wchar.h	/^  __ISwspace = 5,			\/* Whitespace.  *\/$/;"	e	enum:__anon8
-__ISwupper	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@wctype-wchar.h	/^  __ISwupper = 0,			\/* UPPERCASE.  *\/$/;"	e	enum:__anon8
-__ISwxdigit	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@wctype-wchar.h	/^  __ISwxdigit = 4,			\/* Hexadecimal numeric.  *\/$/;"	e	enum:__anon8
+__ISwalnum	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@wctype-wchar.h	/^  __ISwalnum = 11,			\/* Alphanumeric.  *\/$/;"	e	enum:__anon7
+__ISwalpha	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@wctype-wchar.h	/^  __ISwalpha = 2,			\/* Alphabetic.  *\/$/;"	e	enum:__anon7
+__ISwblank	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@wctype-wchar.h	/^  __ISwblank = 8,			\/* Blank (usually SPC and TAB).  *\/$/;"	e	enum:__anon7
+__ISwcntrl	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@wctype-wchar.h	/^  __ISwcntrl = 9,			\/* Control character.  *\/$/;"	e	enum:__anon7
+__ISwdigit	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@wctype-wchar.h	/^  __ISwdigit = 3,			\/* Numeric.  *\/$/;"	e	enum:__anon7
+__ISwgraph	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@wctype-wchar.h	/^  __ISwgraph = 7,			\/* Graphical.  *\/$/;"	e	enum:__anon7
+__ISwlower	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@wctype-wchar.h	/^  __ISwlower = 1,			\/* lowercase.  *\/$/;"	e	enum:__anon7
+__ISwprint	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@wctype-wchar.h	/^  __ISwprint = 6,			\/* Printing.  *\/$/;"	e	enum:__anon7
+__ISwpunct	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@wctype-wchar.h	/^  __ISwpunct = 10,			\/* Punctuation.  *\/$/;"	e	enum:__anon7
+__ISwspace	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@wctype-wchar.h	/^  __ISwspace = 5,			\/* Whitespace.  *\/$/;"	e	enum:__anon7
+__ISwupper	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@wctype-wchar.h	/^  __ISwupper = 0,			\/* UPPERCASE.  *\/$/;"	e	enum:__anon7
+__ISwxdigit	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@wctype-wchar.h	/^  __ISwxdigit = 4,			\/* Hexadecimal numeric.  *\/$/;"	e	enum:__anon7
 __KERNEL_OLD_TIMEVAL_MATCHES_TIMEVAL64	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@typesizes.h	93;"	d
 __KERNEL_OLD_TIMEVAL_MATCHES_TIMEVAL64	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@typesizes.h	99;"	d
 __KERNEL_STRICT_NAMES	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@features.h	149;"	d
@@ -2982,7 +2982,7 @@ __OFF64_T_TYPE	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linu
 __OFF_T_MATCHES_OFF64_T	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@typesizes.h	81;"	d
 __OFF_T_TYPE	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@typesizes.h	51;"	d
 __ONCE_ALIGNMENT	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@pthreadtypes-arch.h	48;"	d
-__ONCE_ALIGNMENT	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@thread-shared-types.h	/^  int __data __ONCE_ALIGNMENT;$/;"	m	struct:__anon26
+__ONCE_ALIGNMENT	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@thread-shared-types.h	/^  int __data __ONCE_ALIGNMENT;$/;"	m	struct:__anon1
 __ONCE_FLAG_INIT	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@thread-shared-types.h	113;"	d
 __P	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@sys@cdefs.h	118;"	d
 __P	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@sys@cdefs.h	35;"	d
@@ -3241,14 +3241,14 @@ _____fpos_t_defined	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64
 ____mbstate_t_defined	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@types@__mbstate_t.h	2;"	d
 ____sigset_t_defined	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@types@__sigset_t.h	2;"	d
 __a	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@stdlib.h	/^    __extension__ unsigned long long int __a;	\/* Factor in congruential$/;"	m	struct:drand48_data
-__align	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@pthreadtypes.h	/^  __extension__ long long int __align;$/;"	m	union:__anon17
-__align	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@pthreadtypes.h	/^  int __align;$/;"	m	union:__anon14
+__align	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@pthreadtypes.h	/^  __extension__ long long int __align;$/;"	m	union:__anon11
 __align	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@pthreadtypes.h	/^  int __align;$/;"	m	union:__anon15
-__align	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@pthreadtypes.h	/^  int __align;$/;"	m	union:__anon21
-__align	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@pthreadtypes.h	/^  long int __align;$/;"	m	union:__anon16
-__align	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@pthreadtypes.h	/^  long int __align;$/;"	m	union:__anon18
-__align	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@pthreadtypes.h	/^  long int __align;$/;"	m	union:__anon19
-__align	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@pthreadtypes.h	/^  long int __align;$/;"	m	union:__anon20
+__align	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@pthreadtypes.h	/^  int __align;$/;"	m	union:__anon8
+__align	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@pthreadtypes.h	/^  int __align;$/;"	m	union:__anon9
+__align	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@pthreadtypes.h	/^  long int __align;$/;"	m	union:__anon10
+__align	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@pthreadtypes.h	/^  long int __align;$/;"	m	union:__anon12
+__align	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@pthreadtypes.h	/^  long int __align;$/;"	m	union:__anon13
+__align	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@pthreadtypes.h	/^  long int __align;$/;"	m	union:__anon14
 __align	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@pthreadtypes.h	/^  long int __align;$/;"	m	union:pthread_attr_t
 __aligned_membuf	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@c++@11@ext@aligned_buffer.h	/^      __aligned_membuf(std::nullptr_t) { }$/;"	f	struct:__gnu_cxx::__aligned_membuf
 __aligned_membuf	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@c++@11@ext@aligned_buffer.h	/^    struct __aligned_membuf$/;"	s	namespace:__gnu_cxx
@@ -3258,7 +3258,7 @@ __always_inline	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-lin
 __always_inline	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@sys@cdefs.h	426;"	d
 __always_inline	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@sys@cdefs.h	427;"	d
 __arg	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@pthread.h	/^  void *__arg;                            \/* Its argument.  *\/$/;"	m	struct:_pthread_cleanup_buffer
-__atomic_wide_counter	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@atomic_wide_counter.h	/^} __atomic_wide_counter;$/;"	t	typeref:union:__anon23
+__atomic_wide_counter	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@atomic_wide_counter.h	/^} __atomic_wide_counter;$/;"	t	typeref:union:__anon24
 __attr_access	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@sys@cdefs.h	665;"	d
 __attr_access	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@sys@cdefs.h	682;"	d
 __attr_access_none	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@sys@cdefs.h	676;"	d
@@ -3319,7 +3319,7 @@ __attribute_used__	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-
 __attribute_used__	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@sys@cdefs.h	333;"	d
 __attribute_warn_unused_result__	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@sys@cdefs.h	406;"	d
 __attribute_warn_unused_result__	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@sys@cdefs.h	412;"	d
-__bits	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@cpu-set.h	/^  __cpu_mask __bits[__CPU_SETSIZE \/ __NCPUBITS];$/;"	m	struct:__anon7
+__bits	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@cpu-set.h	/^  __cpu_mask __bits[__CPU_SETSIZE \/ __NCPUBITS];$/;"	m	struct:__anon5
 __blkcnt64_t	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@types.h	/^__STD_TYPE __BLKCNT64_T_TYPE __blkcnt64_t;$/;"	v
 __blkcnt_t	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@types.h	/^__STD_TYPE __BLKCNT_T_TYPE __blkcnt_t;$/;"	v
 __blkcnt_t_defined	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@sys@types.h	193;"	d
@@ -3393,8 +3393,8 @@ __catch	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@c++@11@bits@except
 __catch	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@c++@11@bits@exception_defines.h	41;"	d
 __cfloat128	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@floatn.h	/^typedef _Complex float __cfloat128 __attribute__ ((__mode__ (__TC__)));$/;"	t
 __cfloat16	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@floatn-common.h	/^typedef _Complex float __cfloat16 __attribute__ ((__mode__ (__HC__)));$/;"	t
-__clang_max_align_nonce1	.ccls-cache/@@home@ccaprani@.config@nvim/@snap@ccls@90@usr@lib@llvm-7@lib@clang@7.0.0@include@__stddef_max_align_t.h	/^  long long __clang_max_align_nonce1$/;"	m	struct:__anon22
-__clang_max_align_nonce2	.ccls-cache/@@home@ccaprani@.config@nvim/@snap@ccls@90@usr@lib@llvm-7@lib@clang@7.0.0@include@__stddef_max_align_t.h	/^  long double __clang_max_align_nonce2$/;"	m	struct:__anon22
+__clang_max_align_nonce1	.ccls-cache/@@home@ccaprani@.config@nvim/@snap@ccls@90@usr@lib@llvm-7@lib@clang@7.0.0@include@__stddef_max_align_t.h	/^  long long __clang_max_align_nonce1$/;"	m	struct:__anon6
+__clang_max_align_nonce2	.ccls-cache/@@home@ccaprani@.config@nvim/@snap@ccls@90@usr@lib@llvm-7@lib@clang@7.0.0@include@__stddef_max_align_t.h	/^  long double __clang_max_align_nonce2$/;"	m	struct:__anon6
 __cleanup_fct_attribute	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@pthread.h	552;"	d
 __cleanup_fct_attribute	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@pthreadtypes-arch.h	52;"	d
 __clock_t	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@types.h	/^__STD_TYPE __CLOCK_T_TYPE __clock_t;	\/* Type of CPU usage counts.  *\/$/;"	v
@@ -3450,9 +3450,9 @@ __cxxabiv1	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@c++@11@bits@cxx
 __cxxabiv1	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@c++@11@bits@cxxabi_init_exception.h	/^namespace __cxxabiv1$/;"	n
 __daddr_t	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@types.h	/^__STD_TYPE __DADDR_T_TYPE __daddr_t;	\/* The type of a disk address.  *\/$/;"	v
 __daddr_t_defined	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@sys@types.h	116;"	d
-__data	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@pthreadtypes.h	/^  struct __pthread_cond_s __data;$/;"	m	union:__anon17	typeref:struct:__anon17::__pthread_cond_s
-__data	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@pthreadtypes.h	/^  struct __pthread_mutex_s __data;$/;"	m	union:__anon16	typeref:struct:__anon16::__pthread_mutex_s
-__data	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@pthreadtypes.h	/^  struct __pthread_rwlock_arch_t __data;$/;"	m	union:__anon18	typeref:struct:__anon18::__pthread_rwlock_arch_t
+__data	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@pthreadtypes.h	/^  struct __pthread_cond_s __data;$/;"	m	union:__anon11	typeref:struct:__anon11::__pthread_cond_s
+__data	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@pthreadtypes.h	/^  struct __pthread_mutex_s __data;$/;"	m	union:__anon10	typeref:struct:__anon10::__pthread_mutex_s
+__data	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@pthreadtypes.h	/^  struct __pthread_rwlock_arch_t __data;$/;"	m	union:__anon12	typeref:struct:__anon12::__pthread_rwlock_arch_t
 __debug	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@c++@11@debug@debug.h	/^  namespace __debug { } $/;"	n	namespace:std
 __debug	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@c++@11@bits@c++config.h	/^  inline namespace __debug { }$/;"	n	namespace:std
 __defer	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@pthread.h	/^  void __defer () { pthread_setcanceltype (PTHREAD_CANCEL_DEFERRED,$/;"	f	class:__pthread_cleanup_class
@@ -3463,15 +3463,15 @@ __dev_t_defined	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-lin
 __do_it	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@pthread.h	/^  int __do_it;$/;"	m	class:__pthread_cleanup_class
 __do_it	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@pthread.h	/^  int __do_it;$/;"	m	struct:__pthread_cleanup_frame
 __dremieee128	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@math.h	370;"	d
-__eelision	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@struct_mutex.h	/^      short __eelision;$/;"	m	struct:__pthread_mutex_s::__anon11::__anon12
+__eelision	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@struct_mutex.h	/^      short __eelision;$/;"	m	struct:__pthread_mutex_s::__anon22::__anon23
 __elision	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@struct_mutex.h	/^  short __elision;$/;"	m	struct:__pthread_mutex_s
 __elision	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@struct_mutex.h	47;"	d
-__elision_data	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@struct_mutex.h	/^    } __elision_data;$/;"	m	union:__pthread_mutex_s::__anon11	typeref:struct:__pthread_mutex_s::__anon11::__anon12
+__elision_data	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@struct_mutex.h	/^    } __elision_data;$/;"	m	union:__pthread_mutex_s::__anon22	typeref:struct:__pthread_mutex_s::__anon22::__anon23
 __erase_nodes_if	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@c++@11@bits@erase_if.h	/^      __erase_nodes_if(_Container& __cont, _Predicate __pred)$/;"	f	namespace:std::__detail
 __error_t_defined	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@types@error_t.h	20;"	d
 __errordecl	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@sys@cdefs.h	204;"	d
 __errordecl	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@sys@cdefs.h	208;"	d
-__espins	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@struct_mutex.h	/^      short __espins;$/;"	m	struct:__pthread_mutex_s::__anon11::__anon12
+__espins	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@struct_mutex.h	/^      short __espins;$/;"	m	struct:__pthread_mutex_s::__anon22::__anon23
 __exception_ptr	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@c++@11@bits@exception_ptr.h	/^  namespace __exception_ptr$/;"	n	namespace:std
 __exctype	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@ctype.h	102;"	d
 __exctype_l	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@ctype.h	244;"	d
@@ -3681,7 +3681,7 @@ __gthrw_	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@
 __gthrw_	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@c++@11@bits@gthr-default.h	96;"	d
 __gthrw_pragma	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@c++@11@bits@gthr-default.h	87;"	d
 __have_pthread_attr_t	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@pthreadtypes.h	63;"	d
-__high	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@atomic_wide_counter.h	/^    unsigned int __high;$/;"	m	struct:__anon23::__anon24
+__high	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@atomic_wide_counter.h	/^    unsigned int __high;$/;"	m	struct:__anon24::__anon25
 __id_t	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@types.h	/^__STD_TYPE __ID_T_TYPE __id_t;		\/* General type for IDs.  *\/$/;"	v
 __id_t_defined	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@sys@types.h	104;"	d
 __init	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@stdlib.h	/^    unsigned short int __init;	\/* Flag for initializing.  *\/$/;"	m	struct:drand48_data
@@ -3827,7 +3827,7 @@ __key_t	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@b
 __key_t_defined	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@sys@types.h	122;"	d
 __kind	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@struct_mutex.h	/^  int __kind;$/;"	m	struct:__pthread_mutex_s
 __ldiv_t_defined	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@stdlib.h	72;"	d
-__list	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@struct_mutex.h	/^    __pthread_slist_t __list;$/;"	m	union:__pthread_mutex_s::__anon11
+__list	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@struct_mutex.h	/^    __pthread_slist_t __list;$/;"	m	union:__pthread_mutex_s::__anon22
 __list	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@struct_mutex.h	/^  __pthread_list_t __list;$/;"	m	struct:__pthread_mutex_s
 __lldiv_t_defined	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@stdlib.h	82;"	d
 __locale_struct	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@types@__locale_t.h	/^struct __locale_struct$/;"	s
@@ -3835,7 +3835,7 @@ __locale_t	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gn
 __locales	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@types@__locale_t.h	/^  struct __locale_data *__locales[13]; \/* 13 = __LC_LAST. *\/$/;"	m	struct:__locale_struct	typeref:struct:__locale_struct::__locale_data
 __lock	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@struct_mutex.h	/^  int __lock;$/;"	m	struct:__pthread_mutex_s
 __loff_t	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@types.h	/^typedef __off64_t __loff_t;	\/* Type of file sizes and offsets (LFS).  *\/$/;"	t
-__low	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@atomic_wide_counter.h	/^    unsigned int __low;$/;"	m	struct:__anon23::__anon24
+__low	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@atomic_wide_counter.h	/^    unsigned int __low;$/;"	m	struct:__anon24::__anon25
 __mask_was_saved	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@pthread.h	/^  int __mask_was_saved;$/;"	m	struct:__cancel_jmp_buf_tag
 __mask_was_saved	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@types@struct___jmp_buf_tag.h	/^    int __mask_was_saved;	\/* Saved the signal mask?  *\/$/;"	m	struct:__jmp_buf_tag
 __mbstate_t	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@types@__mbstate_t.h	/^} __mbstate_t;$/;"	t	typeref:struct:__anon2
@@ -3886,7 +3886,7 @@ __off_t	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@b
 __off_t_defined	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@stdio.h	67;"	d
 __off_t_defined	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@sys@types.h	89;"	d
 __old_x	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@stdlib.h	/^    unsigned short int __old_x[3]; \/* Old state.  *\/$/;"	m	struct:drand48_data
-__once_flag	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@thread-shared-types.h	/^} __once_flag;$/;"	t	typeref:struct:__anon26
+__once_flag	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@thread-shared-types.h	/^} __once_flag;$/;"	t	typeref:struct:__anon1
 __ops	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@c++@11@bits@predefined_ops.h	/^namespace __ops$/;"	n	namespace:__gnu_cxx
 __owner	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@struct_mutex.h	/^  int __owner;$/;"	m	struct:__pthread_mutex_s
 __pad	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@pthread.h	/^  void *__pad[4];$/;"	m	struct:__anon37
@@ -3947,18 +3947,18 @@ __setdoit	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@pthread.h	/^  vo
 __shared	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@struct_rwlock.h	/^  int __shared;$/;"	m	struct:__pthread_rwlock_arch_t
 __shared	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@struct_rwlock.h	/^  unsigned char __shared;$/;"	m	struct:__pthread_rwlock_arch_t
 __sig_atomic_t	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@types.h	/^typedef int __sig_atomic_t;$/;"	t
-__sigset_t	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@types@__sigset_t.h	/^} __sigset_t;$/;"	t	typeref:struct:__anon13
+__sigset_t	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@types@__sigset_t.h	/^} __sigset_t;$/;"	t	typeref:struct:__anon26
 __sigset_t_defined	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@types@sigset_t.h	2;"	d
 __sigsetjmp_cancel	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@pthread.h	771;"	d
 __size	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@pthreadtypes.h	/^  char __size[__SIZEOF_PTHREAD_ATTR_T];$/;"	m	union:pthread_attr_t
-__size	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@pthreadtypes.h	/^  char __size[__SIZEOF_PTHREAD_BARRIERATTR_T];$/;"	m	union:__anon21
-__size	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@pthreadtypes.h	/^  char __size[__SIZEOF_PTHREAD_BARRIER_T];$/;"	m	union:__anon20
-__size	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@pthreadtypes.h	/^  char __size[__SIZEOF_PTHREAD_CONDATTR_T];$/;"	m	union:__anon15
-__size	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@pthreadtypes.h	/^  char __size[__SIZEOF_PTHREAD_COND_T];$/;"	m	union:__anon17
-__size	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@pthreadtypes.h	/^  char __size[__SIZEOF_PTHREAD_MUTEXATTR_T];$/;"	m	union:__anon14
-__size	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@pthreadtypes.h	/^  char __size[__SIZEOF_PTHREAD_MUTEX_T];$/;"	m	union:__anon16
-__size	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@pthreadtypes.h	/^  char __size[__SIZEOF_PTHREAD_RWLOCKATTR_T];$/;"	m	union:__anon19
-__size	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@pthreadtypes.h	/^  char __size[__SIZEOF_PTHREAD_RWLOCK_T];$/;"	m	union:__anon18
+__size	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@pthreadtypes.h	/^  char __size[__SIZEOF_PTHREAD_BARRIERATTR_T];$/;"	m	union:__anon15
+__size	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@pthreadtypes.h	/^  char __size[__SIZEOF_PTHREAD_BARRIER_T];$/;"	m	union:__anon14
+__size	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@pthreadtypes.h	/^  char __size[__SIZEOF_PTHREAD_CONDATTR_T];$/;"	m	union:__anon9
+__size	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@pthreadtypes.h	/^  char __size[__SIZEOF_PTHREAD_COND_T];$/;"	m	union:__anon11
+__size	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@pthreadtypes.h	/^  char __size[__SIZEOF_PTHREAD_MUTEXATTR_T];$/;"	m	union:__anon8
+__size	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@pthreadtypes.h	/^  char __size[__SIZEOF_PTHREAD_MUTEX_T];$/;"	m	union:__anon10
+__size	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@pthreadtypes.h	/^  char __size[__SIZEOF_PTHREAD_RWLOCKATTR_T];$/;"	m	union:__anon13
+__size	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@pthreadtypes.h	/^  char __size[__SIZEOF_PTHREAD_RWLOCK_T];$/;"	m	union:__anon12
 __socklen_t	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@types.h	/^__STD_TYPE __U32_TYPE __socklen_t;$/;"	v
 __spins	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@struct_mutex.h	/^  short __spins;$/;"	m	struct:__pthread_mutex_s
 __spins	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@struct_mutex.h	46;"	d
@@ -4057,14 +4057,14 @@ __useconds_t_defined	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_6
 __va_arg_pack	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@sys@cdefs.h	467;"	d
 __va_arg_pack_len	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@sys@cdefs.h	468;"	d
 __va_copy	.ccls-cache/@@home@ccaprani@.config@nvim/@snap@ccls@90@usr@lib@llvm-7@lib@clang@7.0.0@include@stdarg.h	40;"	d
-__val	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@types@__sigset_t.h	/^  unsigned long int __val[_SIGSET_NWORDS];$/;"	m	struct:__anon13
+__val	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@types@__sigset_t.h	/^  unsigned long int __val[_SIGSET_NWORDS];$/;"	m	struct:__anon26
 __val_comp_iter	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@c++@11@bits@predefined_ops.h	/^    __val_comp_iter(_Compare __comp)$/;"	f	namespace:__gnu_cxx::__ops
 __val_comp_iter	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@c++@11@bits@predefined_ops.h	/^    __val_comp_iter(_Iter_comp_iter<_Compare> __comp)$/;"	f	namespace:__gnu_cxx::__ops
 __val_comp_iter	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@c++@11@bits@predefined_ops.h	/^  __val_comp_iter(_Iter_less_iter)$/;"	f	namespace:__gnu_cxx::__ops
 __val_less_iter	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@c++@11@bits@predefined_ops.h	/^  __val_less_iter()$/;"	f	namespace:__gnu_cxx::__ops
 __value	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@types@__mbstate_t.h	/^  } __value;		\/* Value so far.  *\/$/;"	m	struct:__anon2	typeref:union:__anon2::__anon3
-__value32	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@atomic_wide_counter.h	/^  } __value32;$/;"	m	union:__anon23	typeref:struct:__anon23::__anon24
-__value64	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@atomic_wide_counter.h	/^  __extension__ unsigned long long int __value64;$/;"	m	union:__anon23
+__value32	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@atomic_wide_counter.h	/^  } __value32;$/;"	m	union:__anon24	typeref:struct:__anon24::__anon25
+__value64	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@atomic_wide_counter.h	/^  __extension__ unsigned long long int __value64;$/;"	m	union:__anon24
 __warnattr	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@sys@cdefs.h	203;"	d
 __warnattr	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@sys@cdefs.h	207;"	d
 __wch	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@types@__mbstate_t.h	/^    __WINT_TYPE__ __wch;$/;"	m	union:__anon2::__anon3
@@ -4182,7 +4182,7 @@ coshf	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@c++
 coshl	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@c++@11@bits@c++config.h	1883;"	d
 cosl	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@c++@11@bits@c++config.h	1888;"	d
 count	.ccls-cache/@@home@ccaprani@.config@nvim/@home@ccaprani@projects@btls@cpp@include@Rainflow.h	/^        double count;$/;"	m	struct:CRainflow::ExtractCycleOut
-cpu_set_t	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@cpu-set.h	/^} cpu_set_t;$/;"	t	typeref:struct:__anon7
+cpu_set_t	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@cpu-set.h	/^} cpu_set_t;$/;"	t	typeref:struct:__anon5
 ctime	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@time.h	188;"	d
 ctime_r	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@time.h	209;"	d
 currency_symbol	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@locale.h	/^  char *currency_symbol;	\/* Local currency symbol.  *\/$/;"	m	struct:lconv
@@ -4195,7 +4195,7 @@ decimal_point	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@locale.h	/^ 
 dev_t	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@sys@types.h	/^typedef __dev_t dev_t;$/;"	t
 dgettext	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@libintl.h	111;"	d
 difftime	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@time.h	92;"	d
-div_t	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@stdlib.h	/^  } div_t;$/;"	t	typeref:struct:__anon4
+div_t	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@stdlib.h	/^  } div_t;$/;"	t	typeref:struct:__anon17
 dngettext	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@libintl.h	116;"	d
 double_t	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@math.h	/^typedef double double_t;$/;"	t
 drand48_data	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@stdlib.h	/^struct drand48_data$/;"	s
@@ -4213,8 +4213,8 @@ expl	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@c++@
 fabsf	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@c++@11@bits@c++config.h	1903;"	d
 fabsl	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@c++@11@bits@c++config.h	1908;"	d
 fd_mask	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@sys@select.h	/^typedef __fd_mask fd_mask;$/;"	t
-fd_set	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@sys@select.h	/^  } fd_set;$/;"	t	typeref:struct:__anon1
-fds_bits	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@sys@select.h	/^    __fd_mask fds_bits[__FD_SETSIZE \/ __NFDBITS];$/;"	m	struct:__anon1
+fd_set	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@sys@select.h	/^  } fd_set;$/;"	t	typeref:struct:__anon16
+fds_bits	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@sys@select.h	/^    __fd_mask fds_bits[__FD_SETSIZE \/ __NFDBITS];$/;"	m	struct:__anon16
 fgetpos	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@stdio.h	773;"	d
 field	.ccls-cache/@@home@ccaprani@.config@nvim/@home@ccaprani@projects@btls@cpp@include@CSVParse.h	/^	std::vector<std::string> field;	\/\/ field strings$/;"	m	class:CCSVParse
 fieldsep	.ccls-cache/@@home@ccaprani@.config@nvim/@home@ccaprani@projects@btls@cpp@include@CSVParse.h	/^	std::string fieldsep;		\/\/ separator characters$/;"	m	class:CCSVParse
@@ -4515,7 +4515,7 @@ key_t	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@sys
 lconv	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@locale.h	/^struct lconv$/;"	s
 ldexpf	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@c++@11@bits@c++config.h	2008;"	d
 ldexpl	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@c++@11@bits@c++config.h	2013;"	d
-ldiv_t	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@stdlib.h	/^  } ldiv_t;$/;"	t	typeref:struct:__anon5
+ldiv_t	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@stdlib.h	/^  } ldiv_t;$/;"	t	typeref:struct:__anon18
 le16toh	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@endian.h	42;"	d
 le16toh	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@endian.h	58;"	d
 le32toh	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@endian.h	47;"	d
@@ -4524,7 +4524,7 @@ le64toh	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@endian.h	52;"	d
 le64toh	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@endian.h	68;"	d
 line	.ccls-cache/@@home@ccaprani@.config@nvim/@home@ccaprani@projects@btls@cpp@include@CSVParse.h	/^	std::string line;			\/\/ input line$/;"	m	class:CCSVParse
 literals	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@c++@11@bits@c++config.h	/^  inline namespace literals {$/;"	n	namespace:std
-lldiv_t	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@stdlib.h	/^  } lldiv_t;$/;"	t	typeref:struct:__anon6
+lldiv_t	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@stdlib.h	/^  } lldiv_t;$/;"	t	typeref:struct:__anon19
 loaded_matchparen	old-init/the_primeagen_init.vim	/^let loaded_matchparen = 1$/;"	v
 local on_attach 	lua-move/lua/settings.lua	/^local on_attach = function(client, bufnr)$/;"	f
 locale_t	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@types@locale_t.h	/^typedef __locale_t locale_t;$/;"	t
@@ -4735,7 +4735,7 @@ math_errhandling	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@math.h	10
 max	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@c++@11@bits@c++config.h	652;"	d
 max_align_t	.ccls-cache/@@home@ccaprani@.config@nvim/@snap@ccls@90@usr@lib@llvm-7@lib@clang@7.0.0@include@__stddef_max_align_t.h	/^typedef double max_align_t;$/;"	t
 max_align_t	.ccls-cache/@@home@ccaprani@.config@nvim/@snap@ccls@90@usr@lib@llvm-7@lib@clang@7.0.0@include@__stddef_max_align_t.h	/^typedef long double max_align_t;$/;"	t
-max_align_t	.ccls-cache/@@home@ccaprani@.config@nvim/@snap@ccls@90@usr@lib@llvm-7@lib@clang@7.0.0@include@__stddef_max_align_t.h	/^} max_align_t;$/;"	t	typeref:struct:__anon22
+max_align_t	.ccls-cache/@@home@ccaprani@.config@nvim/@snap@ccls@90@usr@lib@llvm-7@lib@clang@7.0.0@include@__stddef_max_align_t.h	/^} max_align_t;$/;"	t	typeref:struct:__anon6
 maxerror	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@timex.h	/^  long long maxerror;          \/* maximum error (usec) *\/$/;"	m	struct:timex
 mbrlen	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@wchar.h	/^__NTH (mbrlen (const char *__restrict __s, size_t __n,$/;"	f
 mbstate_t	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@types@mbstate_t.h	/^typedef __mbstate_t mbstate_t;$/;"	t
@@ -4808,8 +4808,8 @@ precision	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu
 pselect	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@sys@select.h	142;"	d
 pthread_attr_t	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@pthreadtypes.h	/^typedef union pthread_attr_t pthread_attr_t;$/;"	t	typeref:union:pthread_attr_t
 pthread_attr_t	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@pthreadtypes.h	/^union pthread_attr_t$/;"	u
-pthread_barrier_t	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@pthreadtypes.h	/^} pthread_barrier_t;$/;"	t	typeref:union:__anon20
-pthread_barrierattr_t	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@pthreadtypes.h	/^} pthread_barrierattr_t;$/;"	t	typeref:union:__anon21
+pthread_barrier_t	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@pthreadtypes.h	/^} pthread_barrier_t;$/;"	t	typeref:union:__anon14
+pthread_barrierattr_t	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@pthreadtypes.h	/^} pthread_barrierattr_t;$/;"	t	typeref:union:__anon15
 pthread_cleanup_pop	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@pthread.h	598;"	d
 pthread_cleanup_pop	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@pthread.h	647;"	d
 pthread_cleanup_pop	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@pthread.h	702;"	d
@@ -4824,25 +4824,25 @@ pthread_cleanup_push_defer_np	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@incl
 pthread_cleanup_push_defer_np	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@pthread.h	716;"	d
 pthread_clockjoin_np	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@pthread.h	260;"	d
 pthread_cond_clockwait	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@pthread.h	1186;"	d
-pthread_cond_t	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@pthreadtypes.h	/^} pthread_cond_t;$/;"	t	typeref:union:__anon17
+pthread_cond_t	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@pthreadtypes.h	/^} pthread_cond_t;$/;"	t	typeref:union:__anon11
 pthread_cond_timedwait	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@pthread.h	1158;"	d
-pthread_condattr_t	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@pthreadtypes.h	/^} pthread_condattr_t;$/;"	t	typeref:union:__anon15
+pthread_condattr_t	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@pthreadtypes.h	/^} pthread_condattr_t;$/;"	t	typeref:union:__anon9
 pthread_equal	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@pthread.h	/^__NTH (pthread_equal (pthread_t __thread1, pthread_t __thread2))$/;"	f
 pthread_key_t	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@pthreadtypes.h	/^typedef unsigned int pthread_key_t;$/;"	t
 pthread_mutex_clocklock	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@pthread.h	829;"	d
 pthread_mutex_consistent_np	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@pthread.h	864;"	d
-pthread_mutex_t	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@pthreadtypes.h	/^} pthread_mutex_t;$/;"	t	typeref:union:__anon16
+pthread_mutex_t	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@pthreadtypes.h	/^} pthread_mutex_t;$/;"	t	typeref:union:__anon10
 pthread_mutex_timedlock	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@pthread.h	810;"	d
 pthread_mutexattr_getrobust_np	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@pthread.h	941;"	d
 pthread_mutexattr_setrobust_np	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@pthread.h	957;"	d
-pthread_mutexattr_t	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@pthreadtypes.h	/^} pthread_mutexattr_t;$/;"	t	typeref:union:__anon14
+pthread_mutexattr_t	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@pthreadtypes.h	/^} pthread_mutexattr_t;$/;"	t	typeref:union:__anon8
 pthread_once_t	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@pthreadtypes.h	/^typedef int __ONCE_ALIGNMENT pthread_once_t;$/;"	t
 pthread_rwlock_clockrdlock	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@pthread.h	1017;"	d
 pthread_rwlock_clockwrlock	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@pthread.h	1065;"	d
-pthread_rwlock_t	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@pthreadtypes.h	/^} pthread_rwlock_t;$/;"	t	typeref:union:__anon18
+pthread_rwlock_t	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@pthreadtypes.h	/^} pthread_rwlock_t;$/;"	t	typeref:union:__anon12
 pthread_rwlock_timedrdlock	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@pthread.h	997;"	d
 pthread_rwlock_timedwrlock	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@pthread.h	1044;"	d
-pthread_rwlockattr_t	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@pthreadtypes.h	/^} pthread_rwlockattr_t;$/;"	t	typeref:union:__anon19
+pthread_rwlockattr_t	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@pthreadtypes.h	/^} pthread_rwlockattr_t;$/;"	t	typeref:union:__anon13
 pthread_spinlock_t	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@pthreadtypes.h	/^typedef volatile int pthread_spinlock_t;$/;"	t
 pthread_t	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@pthreadtypes.h	/^typedef unsigned long int pthread_t;$/;"	t
 pthread_timedjoin_np	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@pthread.h	259;"	d
@@ -4851,9 +4851,9 @@ ptrdiff_t	.ccls-cache/@@home@ccaprani@.config@nvim/@snap@ccls@90@usr@lib@llvm-7@
 ptrdiff_t	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@c++@11@bits@c++config.h	/^  typedef __PTRDIFF_TYPE__	ptrdiff_t;$/;"	t	namespace:std
 qfpclass	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@c++@11@bits@c++config.h	2063;"	d
 quad_t	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@sys@types.h	/^typedef __quad_t quad_t;$/;"	t
-quot	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@stdlib.h	/^    int quot;			\/* Quotient.  *\/$/;"	m	struct:__anon4
-quot	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@stdlib.h	/^    long int quot;		\/* Quotient.  *\/$/;"	m	struct:__anon5
-quot	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@stdlib.h	/^    long long int quot;		\/* Quotient.  *\/$/;"	m	struct:__anon6
+quot	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@stdlib.h	/^    int quot;			\/* Quotient.  *\/$/;"	m	struct:__anon17
+quot	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@stdlib.h	/^    long int quot;		\/* Quotient.  *\/$/;"	m	struct:__anon18
+quot	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@stdlib.h	/^    long long int quot;		\/* Quotient.  *\/$/;"	m	struct:__anon19
 rand_deg	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@stdlib.h	/^    int rand_deg;		\/* Degree of random number generator.  *\/$/;"	m	struct:random_data
 rand_sep	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@stdlib.h	/^    int rand_sep;		\/* Distance between front and rear.  *\/$/;"	m	struct:random_data
 rand_type	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@stdlib.h	/^    int rand_type;		\/* Type of random number generator.  *\/$/;"	m	struct:random_data
@@ -4861,9 +4861,9 @@ random_data	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@stdlib.h	/^str
 read	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@bits@types@cookie_io_functions_t.h	/^  cookie_read_function_t *read;		\/* Read bytes.  *\/$/;"	m	struct:_IO_cookie_io_functions_t
 register_t	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@sys@types.h	/^typedef int register_t __attribute__ ((__mode__ (__word__)));$/;"	t
 register_t	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@x86_64-linux-gnu@sys@types.h	/^typedef int register_t;$/;"	t
-rem	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@stdlib.h	/^    int rem;			\/* Remainder.  *\/$/;"	m	struct:__anon4
-rem	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@stdlib.h	/^    long int rem;		\/* Remainder.  *\/$/;"	m	struct:__anon5
-rem	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@stdlib.h	/^    long long int rem;		\/* Remainder.  *\/$/;"	m	struct:__anon6
+rem	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@stdlib.h	/^    int rem;			\/* Remainder.  *\/$/;"	m	struct:__anon17
+rem	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@stdlib.h	/^    long int rem;		\/* Remainder.  *\/$/;"	m	struct:__anon18
+rem	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@stdlib.h	/^    long long int rem;		\/* Remainder.  *\/$/;"	m	struct:__anon19
 remember_folds	init.vim	/^augroup remember_folds$/;"	a
 rethrow_if_nested	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@c++@11@bits@nested_exception.h	/^    rethrow_if_nested(const _Ex& __ex)$/;"	f	namespace:std
 rethrow_nested	.ccls-cache/@@home@ccaprani@.config@nvim/@usr@include@c++@11@bits@nested_exception.h	/^    rethrow_nested() const$/;"	f	class:std::nested_exception
