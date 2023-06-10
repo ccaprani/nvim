@@ -515,7 +515,30 @@ require("nvim-tree").setup({
     view = {
         adaptive_size = false,
         },
+--    mappings = {
+--            list = {
+--                { key = "u", action = "dir_up" },
+--                {key = "?", action = "toggle_help"},
+--                {key="<CR>", action = "edit_no_picker"},
+--            }
+--        },
 })
+
+
+local function open_nvim_tree(data)
+
+  -- buffer is a directory
+  local directory = vim.fn.isdirectory(data.file) == 1
+
+  if not directory then
+    return
+  end
+
+  -- open the tree
+  require("nvim-tree.api").tree.open()
+end
+vim.api.nvim_create_autocmd("VimEnter", { callback = open_nvim_tree })
+
 
 -- C++ LSP config
 require("ccls").setup({
