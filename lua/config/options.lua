@@ -36,7 +36,6 @@ opt.smartcase = true
 -- UI
 opt.termguicolors = true
 opt.showmatch = false
-opt.noshowmode = true
 opt.hidden = true
 opt.errorbells = false
 opt.wrap = false
