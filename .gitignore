@@ -1,2 +1,18 @@
-# ignore all plugin files/folders
-**/plugged
+# Plugin manager
+lazy-lock.json
+
+# Compiled spell files
+spell/*.spl
+
+# Cache
+.ccls-cache/
+
+# Generated files
+tags
+.netrwhist
+
+# Plugin directory (lazy.nvim managed)
+plugin/
+
+# Claude worktrees
+.claude/
