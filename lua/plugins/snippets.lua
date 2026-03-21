@@ -1,6 +1,7 @@
 return {
     "sirver/ultisnips",
     dependencies = { "honza/vim-snippets" },
+    enabled = vim.fn.has("win32") == 0 or vim.fn.exepath("python") ~= "",
     config = function()
         vim.g.UltiSnipsSnippetDirectories = { "UltiSnips" }
         vim.g.UltiSnipsExpandTrigger = "<tab>"
