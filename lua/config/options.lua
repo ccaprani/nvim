@@ -7,6 +7,7 @@ g.maplocalleader = " "
 
 -- Python host (auto-detect for portability)
 local python = vim.fn.exepath("python3")
+if python == "" then python = vim.fn.exepath("python") end  -- Windows fallback
 if python ~= "" then
     g.python3_host_prog = python
 end
