@@ -50,6 +50,12 @@ opt.splitbelow = true
 opt.splitright = true
 opt.completeopt = { "menuone", "noselect" }
 
+-- Auto-reload files changed outside of Neovim
+vim.o.autoread = true
+vim.api.nvim_create_autocmd({"FocusGained", "BufEnter"}, {
+  command = "checktime"
+})
+
 -- Files
 opt.swapfile = false
 opt.backup = false
