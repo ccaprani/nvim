@@ -5,6 +5,7 @@ return {
         local wk = require("which-key")
         wk.setup()
         wk.add({
+            { "<leader>a", group = "Agentic" },
             { "<leader>S", group = "Session" },
             { "<leader>v", group = "Vim config" },
             { "<leader>p", group = "Pandoc" },
