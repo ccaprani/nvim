@@ -1,9 +1,11 @@
 return {
     "carlos-algms/agentic.nvim",
     opts = {
-        -- Pi is exposed to Agentic through the Agent Client Protocol adapter.
-        -- Install with: npm install -g pi-acp
-        provider = "pi-acp",
+        -- Agents connect over the Agent Client Protocol (ACP) via bridge binaries:
+        --   claude-acp -> claude-code-acp  (npm i -g @zed-industries/claude-code-acp)
+        --   codex-acp  -> codex-acp        (binary from zed-industries/codex-acp releases)
+        -- Switch between them at runtime with <leader>ap.
+        provider = "claude-acp",
         provider_switcher = {
             -- Keep the provider picker focused on CLIs that are actually installed.
             hide_unhealthy_providers = true,
